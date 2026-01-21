@@ -1,0 +1,87 @@
+Complete the following 10 questions based on today's lesson. Write your code and answers clearly.
+
+Create a assignment folder inside Phase-1,
+
+Create a new file for each of the following questions below.
+
+Question 1: Basic Variables
+Create three variables:
+
+firstName with your first name
+lastName with your last name
+city with the name of your city
+Print all three using console.log().
+
+Question 2: Number Operations
+Create two variables:
+
+num1 = 25
+num2 = 7
+Calculate and print:
+
+Addition
+Subtraction
+Multiplication
+Division
+Remainder
+Question 3: Data Types
+What will be the output of typeof for these variables? Write your answer first, then verify with code.
+
+let score = 100
+let playerName = 'John'
+let isGameOver = true
+Your Predictions:
+
+typeof score = _______________
+typeof playerName = _______________
+typeof isGameOver = _______________
+Question 4: String and Number Together
+Create these variables:
+
+studentName = 'Rahul'
+marks = 95
+subject = 'Math'
+Print: "Rahul scored 95 in Math" using the variables with console.log().
+
+Question 5: Multiple Console Logs
+Create variables for a book:
+
+bookTitle = 'Harry Potter'
+author = 'J.K. Rowling'
+pages = 500
+isAvailable = true
+Print each detail on a separate line using console.log with descriptive text.
+
+Question 6: Boolean Practice
+Create a variable isSunny and set it to false.
+
+Print: "Is it sunny today: false" using the variable.
+
+Question 7: Null Value
+Create a variable phoneNumber and set it to null.
+
+Print the variable and its type using typeof.
+
+Question 8: Calculator
+Create variables:
+
+price1 = 150
+price2 = 200
+price3 = 75
+Calculate the total price and print it with a message: "Total Price: 425"
+
+Question 9: Personal Information
+Create at least 5 variables about yourself:
+
+name
+age
+school/college
+hobby
+favoriteColor
+Print all of them with appropriate messages.
+
+Question 10: BigInt Practice
+Create a variable bigNumber with this value:
+
+99999999999999999999999999999999999999n
+Print the number and its type.

@@ -1,0 +1,412 @@
+JavaScript Logical Operators - Practice Assignment
+Instructions: Solve each question by first predicting the output, then verify by running the code.
+Question 1: Basic AND Operator
+What will be the output?
+
+console.log(true && true)
+Your Prediction: _______________
+
+Question 2: Basic OR Operator
+What will be the output?
+
+console.log(false || false)
+Your Prediction: _______________
+
+Question 3: Basic NOT Operator
+What will be the output?
+
+console.log(!true)
+Your Prediction: _______________
+
+Question 4: AND with False
+What will be the output?
+
+console.log(true && false)
+Your Prediction: _______________
+
+Question 5: OR with True
+What will be the output?
+
+console.log(false || true)
+Your Prediction: _______________
+
+Question 6: NOT False
+What will be the output?
+
+console.log(!false)
+Your Prediction: _______________
+
+Question 7: Combined AND and NOT
+What will be the output?
+
+console.log(true && !false)
+Your Prediction: _______________
+
+Question 8: OR and AND Together
+What will be the output?
+
+console.log(false || true && false)
+Your Prediction: _______________
+
+Question 9: NOT with AND
+What will be the output?
+
+console.log(!(true && false))
+Your Prediction: _______________
+
+Question 10: Complex Expression 1
+What will be the output?
+
+console.log(!(false || false) && true)
+Your Prediction: _______________
+
+Question 11: OR, AND, and NOT
+What will be the output?
+
+console.log(true || false && !true)
+Your Prediction: _______________
+
+Question 12: NOT with OR
+What will be the output?
+
+console.log(!(true || false) && false)
+Your Prediction: _______________
+
+Question 13: Nested NOT and AND
+What will be the output?
+
+console.log(false || !(true && false))
+Your Prediction: _______________
+
+Question 14: Complex Expression 2
+What will be the output?
+
+console.log(!(false || true && false))
+Your Prediction: _______________
+
+Question 15: Multiple Operations
+What will be the output?
+
+console.log(true && !(false || true && false))
+Your Prediction: _______________
+
+Question 16: Parentheses and NOT
+What will be the output?
+
+console.log(!(true && (false || true)) || false)
+Your Prediction: _______________
+
+Question 17: Double NOT
+What will be the output?
+
+console.log(false || !(!(true && false) || false))
+Your Prediction: _______________
+
+Question 18: Complex Nested Expression
+What will be the output?
+
+console.log(!(false && (true || false)) && true)
+Your Prediction: _______________
+
+Question 19: Multiple NOT Operations
+What will be the output?
+
+console.log(!((true || false) && !(false && true)))
+Your Prediction: _______________
+
+Question 20: Advanced Combination
+What will be the output?
+
+console.log(false || !(true && !(false || true && false)))
+Your Prediction: _______________
+
+Question 21: Triple NOT
+What will be the output?
+
+console.log(!(!true || (false && !(true || false))))
+Your Prediction: _______________
+
+Question 22: Deeply Nested Expression
+What will be the output?
+
+console.log(!(false || !(!(true && false) && (false || true))))
+Your Prediction: _______________
+
+Question 23: Very Complex Expression
+What will be the output?
+
+console.log(!((false || true) && !(!(false && true) || !(true || false && true))))
+Your Prediction: _______________
+
+Question 24: Combined Expression with OR
+What will be the output?
+
+console.log((true && false) || true)
+Your Prediction: _______________
+
+Question 25: Ultimate Challenge
+What will be the output?
+
+console.log(false || !(!(false || true) && false))
+Your Prediction: _______________
+
+Question 26: AND with Numbers
+What will be the output?
+
+console.log(100 && 40 && 30)
+Your Prediction: _______________
+
+Question 27: AND with Zero
+What will be the output?
+
+console.log(100 && 40 && 0 && 15)
+Your Prediction: _______________
+
+Question 28: AND with Empty String
+What will be the output?
+
+console.log(100 && 40 && "" && 15)
+Your Prediction: _______________
+
+Question 29: AND with Undefined
+What will be the output?
+
+console.log(100 && 40 && undefined && 15)
+Your Prediction: _______________
+
+Question 30: AND with Null
+What will be the output?
+
+console.log(100 && 40 && null && 15)
+Your Prediction: _______________
+
+Question 31: AND with All Falsy Values
+What will be the output?
+
+console.log(undefined && null && NaN && "hello")
+Your Prediction: _______________
+
+Question 32: OR with Numbers
+What will be the output?
+
+console.log(100 || 40 || 30)
+Your Prediction: _______________
+
+Question 33: OR with Zero First
+What will be the output?
+
+console.log(0 || 40 || 30)
+Your Prediction: _______________
+
+Question 34: OR with Empty String and Zero
+What will be the output?
+
+console.log(0 || "" || 30)
+Your Prediction: _______________
+
+Question 35: OR with Multiple Falsy Values
+What will be the output?
+
+console.log(0 || "" || undefined || null)
+Your Prediction: _______________
+
+Question 36: OR with False First
+What will be the output?
+
+console.log(false || 0 || "" || undefined)
+Your Prediction: _______________
+
+Question 37: OR with Strings
+What will be the output?
+
+console.log("" || "hello" || 0)
+Your Prediction: _______________
+
+Question 38: OR with Null and Number
+What will be the output?
+
+console.log(null || undefined || false || 50)
+Your Prediction: _______________
+
+Question 39: OR with Boolean Values
+What will be the output?
+
+console.log(false || true || false)
+Your Prediction: _______________
+
+Question 40: OR with NaN
+What will be the output?
+
+console.log(0 || NaN || "JS")
+Your Prediction: _______________
+
+Question 41: OR with All Falsy
+What will be the output?
+
+console.log(undefined || null || 0 || "")
+Your Prediction: _______________
+
+Question 42: OR with Long Falsy Chain
+What will be the output?
+
+console.log("" || 0 || undefined || null || NaN || "hello")
+Your Prediction: _______________
+
+Question 43: OR with Two Strings
+What will be the output?
+
+console.log("" || "7")
+Your Prediction: _______________
+
+Question 44: AND with String and Number
+What will be the output?
+
+console.log("hello" && 100 && 50)
+Your Prediction: _______________
+
+Question 45: AND with False at End
+What will be the output?
+
+console.log(10 && 20 && 30 && false)
+Your Prediction: _______________
+
+Question 46: OR with Number First
+What will be the output?
+
+console.log(25 || 0 || "")
+Your Prediction: _______________
+
+Question 47: AND with NaN
+What will be the output?
+
+console.log(50 && NaN && 100)
+Your Prediction: _______________
+
+Question 48: Mixed AND and OR
+What will be the output?
+
+console.log(0 || 10 && 20)
+Your Prediction: _______________
+
+Question 49: Complex Mixed Expression
+What will be the output?
+
+console.log(false && 10 || 30)
+Your Prediction: _______________
+
+Question 50: Ultimate Value Challenge
+What will be the output?
+
+console.log("" || 0 && 50 || "end")
+Your Prediction: _______________
+
+Increment Decrement problems
+Question 1: Basic Post-Increment
+What will be the output?
+
+let a = 5
+console.log(a++)
+console.log(a)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Question 2: Basic Pre-Increment
+What will be the output?
+
+let b = 5
+console.log(++b)
+console.log(b)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Question 3: Basic Post-Decrement
+What will be the output?
+
+let c = 10
+console.log(c--)
+console.log(c)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Question 4: Basic Pre-Decrement
+What will be the output?
+
+let d = 10
+console.log(--d)
+console.log(d)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Question 5: Post-Increment in Expression
+What will be the output?
+
+let x = 7
+let y = x++ + 5
+console.log(y)
+console.log(x)
+Your Prediction:
+
+y = _______________
+x = _______________
+Question 6: Pre-Increment in Expression
+What will be the output?
+
+let x = 7
+let y = ++x + 5
+console.log(y)
+console.log(x)
+Your Prediction:
+
+y = _______________
+x = _______________
+Question 7: Multiple Post-Increments
+What will be the output?
+
+let num = 3
+console.log(num++)
+console.log(num++)
+console.log(num++)
+console.log(num)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Third output: _______________
+Fourth output: _______________
+Question 8: Mixing Pre and Post Increment
+What will be the output?
+
+let a = 5
+let result = a++ + ++a
+console.log(result)
+console.log(a)
+Your Prediction:
+
+result = _______________
+a = _______________
+Question 9: Decrement in Expression
+What will be the output?
+
+let p = 20
+let q = --p + p--
+console.log(q)
+console.log(p)
+Your Prediction:
+
+q = _______________
+p = _______________
+Question 10: Complex Expression
+What will be the output?
+
+let m = 10
+let n = m++ + m + ++m
+console.log(n)
+console.log(m)
+Your Prediction:
+
+n = _______________
+m = _______________
