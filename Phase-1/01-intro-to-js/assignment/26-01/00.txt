@@ -1,0 +1,365 @@
+Instructions: Complete all sections based on your learnings. Write your code and test it before submitting.
+
+Section 1: Array Basics (10 Questions)
+Q1. Create an array called myInfo with your name (string), age (number), city (string), and a boolean value true.
+
+Your Code:
+
+// Write your code here
+Q2. Access and print the second element from the myInfo array you created.
+
+Your Code:
+
+// Write your code here
+Q3. Change the third element of your myInfo array to a different city name. Print the updated array.
+
+Your Code:
+
+// Write your code here
+Q4. Create an array colors with three color names. Use push() to add two more colors. Print the final array.
+
+Your Code:
+
+// Write your code here
+Q5. Create an array numbers with values [5, 10, 15, 20, 25]. Use pop() to remove the last element and store it in a variable. Print both the array and the removed element.
+
+Your Code:
+
+// Write your code here
+Q6. What is the output? Predict first, then verify.
+
+let arr = [10, 20, 30, 40]
+console.log(arr.length)
+console.log(arr[arr.length - 1])
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Q7. Create an array fruits with 3 fruit names. Use shift() to remove the first element. Print the array and the removed element.
+
+Your Code:
+
+// Write your code here
+Q8. Create an array animals with 2 animal names. Use unshift() to add 2 more animals at the beginning. Print the final array.
+
+Your Code:
+
+// Write your code here
+Q9. Create an array with 5 numbers. Add a new element at the end using the array's length property (without using push). Print the array.
+
+Your Code:
+
+// Write your code here
+Q10. What will be the output?
+
+let items = ['pen', 'book', 'bag']
+items.push('pencil')
+items.pop()
+items.unshift('eraser')
+console.log(items)
+console.log(items.length)
+Your Prediction:
+
+Array: _______________
+Length: _______________
+Section 2: Nested Arrays (10 Questions)
+Q11. Create two arrays: myFruits with 3 fruits and myVeggies with 3 vegetables. Create a third array basket that contains both arrays. Print basket.
+
+Your Code:
+
+// Write your code here
+Q12. Using the basket array from Q11, access and print the second fruit.
+
+Your Code:
+
+// Write your code here
+Q13. What will be the output?
+
+let fruits = ['apple', 'mango', 'banana']
+let veggies = ['tomato', 'potato']
+let basket = [fruits, veggies]
+
+console.log(basket.length)
+console.log(basket[0].length)
+console.log(basket[1].length)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Third output: _______________
+Q14. Create a nested array:
+
+let data = [10, 'hello', ['a', 'b', 'c']]
+Access and print the letter 'b'.
+
+Your Code:
+
+// Write your code here
+Q15. What will be the output?
+
+let arr = [5, 'test', ['x', 'y', 'z']]
+console.log(arr[2])
+console.log(arr[2][0])
+console.log(arr[2][2])
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Third output: _______________
+Q16. Create a 2D array representing student data:
+
+Student 1: 'Ali', 20, 'Delhi'
+Student 2: 'Sara', 22, 'Mumbai'
+Student 3: 'John', 21, 'Bangalore'
+Access and print Student 2's city.
+
+Your Code:
+
+// Write your code here
+Q17. Using the array from Q16, print the age of Student 3.
+
+Your Code:
+
+// Write your code here
+Q18. Create two arrays and combine them into a nested array. Then use .flat() to flatten them into a single array. Print both versions.
+
+Your Code:
+
+// Write your code here
+Q19. What is the difference between these two?
+
+let arr1 = [['a', 'b'], ['c', 'd']]
+let arr2 = ['a', 'b', 'c', 'd']
+Your Answer:
+
+Q20. Create a nested array with 3 rows and 2 columns (like a table). Access and print the value in row 2, column 1.
+
+Your Code:
+
+// Write your code here
+Section 3: Array Reference vs Copy (8 Questions)
+Q21. What will be the output? Predict first, then verify.
+
+let arr1 = [10, 20, 30]
+let arr2 = arr1
+arr1[0] = 100
+console.log(arr1)
+console.log(arr2)
+Your Prediction:
+
+arr1: _______________
+arr2: _______________
+Explanation: Why did this happen?
+
+Q22. What will be the output?
+
+let arr1 = [5, 10, 15]
+let arr2 = arr1
+arr2.push(20)
+console.log(arr1)
+console.log(arr2)
+Your Prediction:
+
+arr1: _______________
+arr2: _______________
+Q23. Create an array original with values [1, 2, 3]. Create a copy using the spread operator .... Modify the copy and verify the original is unchanged.
+
+Your Code:
+
+// Write your code here
+Q24. What will be the output?
+
+let arr1 = [100, 200]
+let arr2 = [...arr1]
+arr2[0] = 999
+console.log(arr1[0])
+console.log(arr2[0])
+Your Prediction:
+
+arr1[0]: _______________
+arr2[0]: _______________
+Q25. What will be the output?
+
+let arr1 = [1, 2, 3]
+let arr2 = [...arr1]
+console.log(arr1 == arr2)
+console.log(arr1[0] == arr2[0])
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Explanation: Why are the results different?
+
+Q26. Create two separate arrays with the same values. Check if they are equal using ==. What do you observe?
+
+Your Code:
+
+// Write your code here
+Your Observation:
+
+Q27. What's the difference between these two?
+
+let arr2 = arr1        // Method 1
+let arr2 = [...arr1]   // Method 2
+Your Answer:
+
+Q28. Create an array, make a reference copy and a spread copy. Push a new element to the reference copy. What happens to the original and the spread copy?
+
+Your Code:
+
+// Write your code here
+Your Observation:
+
+Section 4: Object Basics (12 Questions)
+Q29. Create an object called student with properties: name, age, and city. Print the entire object.
+
+Your Code:
+
+// Write your code here
+Q30. Access and print the name property from the student object using dot notation.
+
+Your Code:
+
+// Write your code here
+Q31. Add a new property marks to your student object with value 85. Print the updated object.
+
+Your Code:
+
+// Write your code here
+Q32. Create an object with a property name that has a space in it (like 'full name'). Access it using bracket notation.
+
+Your Code:
+
+// Write your code here
+Q33. What will be the output?
+
+const person = {
+  name: 'Omer',
+  age: 21
+}
+
+person.city = 'Hyderabad'
+console.log(person)
+Your Prediction:
+
+Q34. Create an object car with properties: brand, model, and year. Delete the year property. Print the object.
+
+Your Code:
+
+// Write your code here
+Q35. What will be the output?
+
+const user = {
+  'user name': 'john123',
+  'email address': 'john@example.com'
+}
+
+console.log(user['user name'])
+console.log(user['email address'])
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Q36. Create an object phone with properties: brand, price, color. Change the price to a new value. Print before and after.
+
+Your Code:
+
+// Write your code here
+Q37. Why do we need bracket notation for this object?
+
+const person = {
+  'full name': 'Omer Ahmed',
+  age: 21
+}
+Your Answer:
+
+Q38. Create an object representing a book with properties: title, author, pages, and isAvailable (boolean). Print the object.
+
+Your Code:
+
+// Write your code here
+Q39. What happens when you try to access a property that doesn't exist?
+
+const obj = { name: 'Omer' }
+console.log(obj.age)
+Your Prediction: _______________
+
+Verify and explain:
+
+Q40. Create an object with at least 5 properties. Add 2 more properties, change 1 existing property, and delete 1 property. Print the final object.
+
+Your Code:
+
+// Write your code here
+Section 5: Combined Challenge (10 Questions)
+Q41. Create an array of 3 objects, where each object represents a product with name, price, and inStock properties.
+
+Your Code:
+
+// Write your code here
+Q42. Access and print the price of the second product from Q41.
+
+Your Code:
+
+// Write your code here
+Q43. Create an object that contains an array as one of its properties. Access an element from that array.
+
+Your Code:
+
+// Write your code here
+Q44. What will be the output?
+
+let fruits = ['apple', 'mango']
+let veggies = ['tomato', 'potato']
+let basket = [fruits, veggies]
+
+basket[0].push('banana')
+console.log(fruits)
+console.log(basket[0])
+Your Prediction:
+
+fruits: _______________
+basket[0]: _______________
+Q45. Create a student object with properties: name, rollNumber, and marks (marks should be an array of 3 numbers). Calculate and print the average marks.
+
+Your Code:
+
+// Write your code here
+Q46. Create two objects with the same properties and values. Check if they are equal using ==. What do you observe?
+
+Your Code:
+
+// Write your code here
+Your Observation:
+
+Q47. What will be the output?
+
+let arr = [1, 2, 3]
+arr.push(4)
+arr[0] = 10
+arr.pop()
+console.log(arr)
+console.log(arr.length)
+Your Prediction:
+
+arr: _______________
+length: _______________
+Q48. Create an object school with properties: name, address (object with city and pincode), and students (array of student names). Access and print the city.
+
+Your Code:
+
+// Write your code here
+Q49. Explain the difference between:
+
+// Case 1
+let obj2 = obj1
+
+// Case 2  
+let obj2 = { ...obj1 }
+Your Answer:
+
+Q50. Create a complex structure: An array of 2 objects, where each object has a name and a hobbies array. Access and print the second hobby of the first person.
+
+Your Code:
+
+// Write your code here

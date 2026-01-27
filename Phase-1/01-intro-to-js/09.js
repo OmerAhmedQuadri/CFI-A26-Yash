@@ -84,3 +84,10 @@ num1 = 10
 num2 = num1--
 console.log(num2);
 console.log(num1);
+
+let power = 2 ** 3
+let square = 5 ** 2
+let cube = 3 ** 3
+console.log(power);
+console.log(square);
+console.log(cube);

@@ -26,3 +26,9 @@ console.log(num==num1)//only checks the value
 console.log(num===num1)//checks type as well
 
 
+let id = Symbol(10)
+console.log(id);
+console.log(typeof id);
+
+let id2 = Symbol(10)
+console.log(id==id2);
