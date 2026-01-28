@@ -1,0 +1,733 @@
+JavaScript Conditional Statements - Practice Assignment
+Section 1: Simple if Statement (10 Questions)
+Q1. Create a variable temperature with value 35. Use an if statement to print "It's hot!" if temperature is greater than 30.
+
+Your Code:
+
+// Write your code here
+Q2. Create a variable age with value 16. Use an if statement to print "You can drive" only if age is 18 or more.
+
+Your Code:
+
+// Write your code here
+Q3. What will be the output?
+
+let num = 0
+
+if (num) {
+    console.log('Number exists')
+}
+
+console.log('End of code')
+Your Prediction:
+
+Explanation: Why did this happen?
+
+Q4. What will be the output?
+
+let username = "admin"
+
+if (username) {
+    console.log('Welcome ' + username)
+}
+
+console.log('Rest of the code')
+Your Prediction:
+
+Q5. Create a variable score with value 95. Use an if statement to print "Excellent!" if score is greater than or equal to 90.
+
+Your Code:
+
+// Write your code here
+Q6. What will be the output?
+
+let price = 100
+
+if (price >= 50) {
+    console.log('Expensive item')
+}
+Your Prediction: _______________
+
+Q7. Create a variable isRaining with value true. Use an if statement to print "Take an umbrella" only if it's raining.
+
+Your Code:
+
+// Write your code here
+Q8. What will be the output?
+
+let name = ""
+
+if (name) {
+    console.log('Hello ' + name)
+}
+
+console.log('Program ended')
+Your Prediction:
+
+Q9. Create a variable marks with value 85. Use an if statement to print "Pass" if marks is 40 or more.
+
+Your Code:
+
+// Write your code here
+Q10. What happens when you run this code?
+
+let num = 50
+
+if (num > 30) 
+    console.log('Greater than 30')
+    console.log('This is a big number')
+
+console.log('Done')
+Your Prediction:
+
+Explanation: How many lines are inside the if statement?
+
+Section 2: if...else Statements (10 Questions)
+Q11. Create a variable age with value 15. Use if...else to print "Adult" if age is 18 or more, otherwise print "Minor".
+
+Your Code:
+
+// Write your code here
+Q12. What will be the output?
+
+let num = 7
+
+if (num >= 10) {
+    console.log('Number is greater than or equal to 10')
+} else {
+    console.log('Number is less than 10')
+}
+Your Prediction:
+
+Q13. Create a variable number with value 8. Use if...else to print "Even" or "Odd".
+
+Your Code:
+
+// Write your code here
+Q14. What will be the output?
+
+let username = 'omer'
+
+if (username == 'admin') {
+    console.log('Hello admin')
+} else {
+    console.log('Hello user')
+}
+Your Prediction: _______________
+
+Q15. Create a variable password with value "pass123". Check if password equals "admin123". Print "Login successful" or "Wrong password".
+
+Your Code:
+
+// Write your code here
+Q16. What will be the output?
+
+let marks = 35
+
+if (marks >= 40) {
+    console.log('Pass')
+} else {
+    console.log('Fail')
+}
+Your Prediction: _______________
+
+Q17. Create two variables: a = 10 and b = 20. Use if...else to print which number is larger.
+
+Your Code:
+
+// Write your code here
+Q18. What will be the output?
+
+let temperature = 25
+
+if (temperature > 30) {
+    console.log('Hot weather')
+} else {
+    console.log('Pleasant weather')
+}
+Your Prediction: _______________
+
+Q19. Create a variable num with value -5. Use if...else to print "Positive" or "Negative or Zero".
+
+Your Code:
+
+// Write your code here
+Q20. Explain what happens with scope in this code:
+
+let name = 'Omer'
+
+if (true) {
+    let name = 'Ahmed'
+    console.log(name)
+}
+
+console.log(name)
+Your Prediction:
+
+First output: _______________
+Second output: _______________
+Explanation:
+
+Section 3: if...else if...else Ladder (10 Questions)
+Q21. Create a variable marks with value 75. Use if...else if...else to print:
+
+"A Grade" if marks >= 90
+"B Grade" if marks >= 70
+"C Grade" if marks >= 50
+"Fail" otherwise
+Your Code:
+
+// Write your code here
+Q22. What will be the output?
+
+let name = 'fahad'
+
+if (name == 'omer') {
+    console.log('Hello omer')
+} else if (name == 'fahad') {
+    console.log('Hello fahad')
+} else {
+    console.log('Hello stranger')
+}
+Your Prediction: _______________
+
+Q23. Create a variable day with value 3. Print the day name:
+
+1 = Monday, 2 = Tuesday, 3 = Wednesday, etc.
+Use if...else if...else
+Your Code:
+
+// Write your code here
+Q24. What will be the output?
+
+let num = 15
+
+if (num > 20) {
+    console.log('Greater than 20')
+} else if (num > 10) {
+    console.log('Greater than 10')
+} else if (num > 5) {
+    console.log('Greater than 5')
+} else {
+    console.log('5 or less')
+}
+Your Prediction: _______________
+
+Question: Why doesn't it print "Greater than 5" also?
+
+Q25. Create a variable age with value 35. Print:
+
+"Child" if age < 13
+"Teenager" if age < 20
+"Adult" if age < 60
+"Senior" otherwise
+Your Code:
+
+// Write your code here
+Q26. What will be the output?
+
+let price = 1500
+
+let discount = 0
+
+if (price >= 5000) {
+    discount = 30
+} else if (price >= 2000) {
+    discount = 20
+} else if (price >= 1000) {
+    discount = 10
+} else {
+    discount = 5
+}
+
+console.log('Your discount is ' + discount + '%')
+Your Prediction: _______________
+
+Q27. Create a variable score with value 0. Use if...else if...else to check:
+
+If score is exactly 0, print "No score yet"
+If score < 50, print "Fail"
+If score < 75, print "Pass"
+Otherwise print "Excellent"
+Your Code:
+
+// Write your code here
+Q28. What will be the output?
+
+let temperature = 15
+
+if (temperature < 0) {
+    console.log('Freezing')
+} else if (temperature < 10) {
+    console.log('Cold')
+} else if (temperature < 20) {
+    console.log('Cool')
+} else if (temperature < 30) {
+    console.log('Warm')
+} else {
+    console.log('Hot')
+}
+Your Prediction: _______________
+
+Q29. Create a discount calculator:
+
+Variable price = 3500
+If price >= 5000: discount = 25%
+If price >= 3000: discount = 15%
+If price >= 1000: discount = 10%
+Otherwise: discount = 0%
+Print the discount percentage
+Your Code:
+
+// Write your code here
+Q30. Create a BMI category checker:
+
+Variable bmi = 22
+If bmi < 18.5: "Underweight"
+If bmi < 25: "Normal"
+If bmi < 30: "Overweight"
+Otherwise: "Obese"
+Your Code:
+
+// Write your code here
+Section 4: Nested if...else (8 Questions)
+Q31. What will be the output?
+
+let name = 'yash'
+let marks = 75
+
+if (name == 'yash') {
+    if (marks > 90) {
+        console.log('Yash scored excellent')
+    } else if (marks > 60) {
+        console.log('Yash passed')
+    } else {
+        console.log('Yash failed')
+    }
+}
+Your Prediction: _______________
+
+Q32. Create a login system with nested if:
+
+username = "admin"
+password = "1234"
+First check if username is "admin"
+If yes, check if password is "1234"
+If yes, print "Login successful"
+If no, print "Wrong password"
+If username is not admin, print "User not found"
+Your Code:
+
+// Write your code here
+Q33. What will be the output?
+
+let age = 25
+let hasLicense = true
+
+if (age >= 18) {
+    if (hasLicense) {
+        console.log('You can drive')
+    } else {
+        console.log('You need a license')
+    }
+} else {
+    console.log('You are too young')
+}
+Your Prediction: _______________
+
+Q34. Create a ticket booking system:
+
+age = 15
+hasParent = true
+If age >= 18: print "Ticket confirmed"
+If age < 18:
+If hasParent is true: print "Ticket confirmed with parent"
+Otherwise: print "Need parent permission"
+Your Code:
+
+// Write your code here
+Q35. Rewrite this nested if using logical operators (&&):
+
+let marks = 85
+let attendance = 90
+
+if (marks >= 80) {
+    if (attendance >= 85) {
+        console.log('Excellent student')
+    }
+}
+Your Code:
+
+// Write your code here
+Q36. What will be the output?
+
+let num = 10
+
+if (num > 0) {
+    if (num % 2 === 0) {
+        console.log('Positive even number')
+    } else {
+        console.log('Positive odd number')
+    }
+} else {
+    console.log('Negative or zero')
+}
+Your Prediction: _______________
+
+Q37. Create a grade system with attendance:
+
+marks = 78
+attendance = 70
+If marks >= 40:
+If attendance >= 75: print "Pass"
+Otherwise: print "Detained due to low attendance"
+Otherwise: print "Fail"
+Your Code:
+
+// Write your code here
+Q38. What's the better way to write this nested if?
+
+if (age >= 18) {
+    if (isCitizen) {
+        console.log('Can vote')
+    }
+}
+Your Answer:
+
+Your Code:
+
+// Write your code here
+Section 5: Template Literals (5 Questions)
+Q39. What will be the output?
+
+let a = 20
+let b = 50
+let max
+
+if (a > b) {
+    max = a
+} else {
+    max = b
+}
+
+console.log(`Max value is: ${max}`)
+Your Prediction: _______________
+
+Q40. Create variables name = "Omer" and age = 25. Use template literals to print: "My name is Omer and I am 25 years old"
+
+Your Code:
+
+// Write your code here
+Q41. What will be the output?
+
+let price = 5000
+let discount = 20
+
+console.log(`Price: ${price}, Discount: ${discount}%, Final: ${price - (price * discount / 100)}`)
+Your Prediction:
+
+Q42. Create a shopping cart calculator:
+
+item = "Laptop"
+price = 50000
+quantity = 2
+Use template literals to print: "Item: Laptop, Price: 50000, Quantity: 2, Total: 100000"
+Your Code:
+
+// Write your code here
+Q43. What's the difference between these two?
+
+// Method 1
+console.log('Max value is: ' + max)
+
+// Method 2
+console.log(`Max value is: ${max}`)
+Your Answer:
+
+Section 6: Switch Case (8 Questions)
+Q44. What will be the output?
+
+let item = 'carrot'
+
+switch (item) {
+    case 'apple':
+        console.log('It is a fruit')
+        break
+    case 'carrot':
+        console.log('It is a vegetable')
+        break
+    case 'tomato':
+        console.log('It is a vegetable')
+        break
+    default:
+        console.log('Unknown item')
+}
+Your Prediction: _______________
+
+Q45. Create a day name printer using switch:
+
+Variable day = 3
+Print day name (1=Monday, 2=Tuesday, etc.)
+Use switch statement
+Your Code:
+
+// Write your code here
+Q46. What will happen if you remove break statements?
+
+let num = 2
+
+switch (num) {
+    case 1:
+        console.log('One')
+    case 2:
+        console.log('Two')
+    case 3:
+        console.log('Three')
+    default:
+        console.log('Other')
+}
+Your Prediction:
+
+Explanation: What is this behavior called?
+
+Q47. Create a grade calculator using switch:
+
+Variable grade = 'B'
+A: "Excellent"
+B: "Good"
+C: "Average"
+F: "Fail"
+default: "Invalid grade"
+Your Code:
+
+// Write your code here
+Q48. What will be the output?
+
+let color = 'red'
+
+switch (color) {
+    case 'red':
+    case 'pink':
+        console.log('Shades of red')
+        break
+    case 'blue':
+    case 'navy':
+        console.log('Shades of blue')
+        break
+    default:
+        console.log('Other color')
+}
+Your Prediction: _______________
+
+Q49. Create a month name printer:
+
+Variable month = 5
+Print month name (1=January, 2=February, etc.)
+Use switch with default case
+Your Code:
+
+// Write your code here
+Q50. When should you use switch instead of if...else if?
+
+Your Answer:
+
+Q51. Convert this if...else to switch:
+
+let fruit = 'apple'
+
+if (fruit === 'apple') {
+    console.log('Red fruit')
+} else if (fruit === 'banana') {
+    console.log('Yellow fruit')
+} else if (fruit === 'orange') {
+    console.log('Orange fruit')
+} else {
+    console.log('Unknown fruit')
+}
+Your Code:
+
+// Write your code here
+Section 7: Ternary Operator (9 Questions)
+Q52. What will be the output?
+
+let marks = 90
+
+marks >= 80 ? console.log('Passed') : console.log('Failed')
+Your Prediction: _______________
+
+Q53. Convert this if...else to ternary operator:
+
+let age = 20
+let status
+
+if (age >= 18) {
+    status = 'Adult'
+} else {
+    status = 'Minor'
+}
+
+console.log(status)
+Your Code:
+
+// Write your code here
+Q54. What will be the output?
+
+let num = 7
+let result = num % 2 === 0 ? 'Even' : 'Odd'
+console.log(result)
+Your Prediction: _______________
+
+Q55. Create a ternary operator to check if a number is positive or negative:
+
+Variable num = -5
+Store result in a variable and print it
+Your Code:
+
+// Write your code here
+Q56. What will be the output?
+
+let price = 1200
+let discount = price >= 1000 ? 20 : 10
+console.log(`Discount: ${discount}%`)
+Your Prediction: _______________
+
+Q57. Create a ternary operator for login check:
+
+username = "admin"
+If username is "admin", message = "Welcome Admin", otherwise "Welcome Guest"
+Print the message
+Your Code:
+
+// Write your code here
+Q58. What will be the output (nested ternary)?
+
+let marks = 85
+let grade = marks >= 90 ? 'A' : marks >= 80 ? 'B' : marks >= 70 ? 'C' : 'F'
+console.log(grade)
+Your Prediction: _______________
+
+Q59. When should you avoid using ternary operators?
+
+Your Answer:
+
+Q60. Convert this to ternary:
+
+let score = 55
+let result
+
+if (score >= 50) {
+    result = 'Pass'
+} else {
+    result = 'Fail'
+}
+
+console.log(result)
+Your Code:
+
+// Write your code here
+Section 8: Mixed Challenges (10 Questions)
+Q61. Create a calculator:
+
+num1 = 10, num2 = 5, operator = '+'
+Use switch to perform operation (+, -, *, /, %)
+Print the result
+Your Code:
+
+// Write your code here
+Q62. Create a traffic light system:
+
+Variable light = 'yellow'
+Red: "Stop"
+Yellow: "Get ready"
+Green: "Go"
+Use both if...else and switch (two versions)
+Your Code (if...else):
+
+// Write your code here
+Your Code (switch):
+
+// Write your code here
+Q63. Create an ATM withdrawal system:
+
+balance = 5000
+withdrawAmount = 3000
+Check if withdrawal amount <= balance
+If yes, subtract and print new balance
+If no, print "Insufficient balance"
+Your Code:
+
+// Write your code here
+Q64. Create a leap year checker:
+
+year = 2024
+A year is leap if:
+Divisible by 4 AND (not divisible by 100 OR divisible by 400)
+Print "Leap year" or "Not a leap year"
+Your Code:
+
+// Write your code here
+Q65. Create a password strength checker:
+
+password = "pass123"
+Length >= 12: "Strong"
+Length >= 8: "Medium"
+Length < 8: "Weak"
+Use .length property
+Your Code:
+
+// Write your code here
+Q66. Create a discount calculator with multiple conditions:
+
+price = 2500
+isPremiumMember = false
+If premium member: 30% discount
+Else if price >= 5000: 25% discount
+Else if price >= 3000: 20% discount
+Else if price >= 1000: 15% discount
+Else: 10% discount
+Calculate and print final price
+Your Code:
+
+// Write your code here
+Q67. Create a student eligibility checker:
+
+marks = 75
+attendance = 80
+hasFee = true
+Student is eligible if:
+marks >= 40 AND attendance >= 75 AND hasFee is true
+Print "Eligible" or "Not eligible"
+Your Code:
+
+// Write your code here
+Q68. Create a number classifier:
+
+num = 0
+Check if positive, negative, or zero
+If positive, check if even or odd
+If negative, check if even or odd
+Print appropriate message for each case
+Your Code:
+
+// Write your code here
+Q69. Create a simple game:
+
+playerChoice = "rock"
+computerChoice = "scissors"
+Rock beats Scissors
+Scissors beats Paper
+Paper beats Rock
+Print "You win", "Computer wins", or "Draw"
+Your Code:
+
+// Write your code here
+Q70. Create a time-based greeting:
+
+hour = 14 (2 PM in 24-hour format)
+5-12: "Good morning"
+12-17: "Good afternoon"
+17-21: "Good evening"
+21-5: "Good night"
+Your Code:
+
+// Write your code here
