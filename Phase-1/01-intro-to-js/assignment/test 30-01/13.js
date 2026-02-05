@@ -7,3 +7,4 @@ while(i<arr1.length)
     i++
 }
 console.log(sum);
+

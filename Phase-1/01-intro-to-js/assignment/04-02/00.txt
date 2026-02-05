@@ -1,0 +1,111 @@
+20 JavaScript Practice Questions
+Basic Functions (Questions 1-5)
+1. Function with Multiple Returns
+Write a function checkAge(age) that:
+
+Returns "minor" if age is less than 18
+Returns "adult" if age is between 18 and 65
+Returns "senior" if age is greater than 65
+2. Function Without Return
+Write a function greetUser(name) that prints "Welcome, [name]!" to the console. What happens if you try to use the return value?
+
+3. Default Parameters
+Write a function multiply(a, b) that multiplies two numbers. If only one number is provided, it should multiply by 10 as default.
+
+4. Function with Validation
+Write a function divide(a, b) that:
+
+Returns the division result
+Prints an error message and returns undefined if b is 0
+Prints an error message if either parameter is not a number
+5. Truthy/Falsy Check
+Write a function isValidInput(value) that returns true if the value is truthy (not 0, empty string, null, undefined, false), otherwise returns false.
+
+Array Operations (Questions 6-10)
+6. Find Odd Numbers
+Write a function giveOdds(arr) that:
+
+Takes an array of numbers
+Returns a new array containing only odd numbers
+Returns an empty array if input is not an array
+7. Count Occurrences
+Write a function countOccurrences(arr, target) that counts how many times target appears in the array.
+
+Example: countOccurrences([1, 2, 3, 2, 4, 2], 2) should return 3
+
+8. Filter by Condition
+Write a function filterGreaterThan(arr, threshold) that returns all numbers in the array greater than the threshold value.
+
+9. Array Sum with Validation
+Write a function sumArray(arr) that:
+
+Returns the sum of all numbers in the array
+Returns 0 if array is empty
+Returns undefined with an error message if input is not an array
+10. Find Maximum
+Write a function findMax(arr) that returns the largest number in the array without using Math.max(). Return undefined if array is empty.
+
+Number Analysis (Questions 11-15)
+11. Perfect Number
+Write a function isPerfect(num) that checks if a number is perfect (a number that equals the sum of its proper positive divisors).
+
+Example: 6 is perfect because 1 + 2 + 3 = 6 or 28 is perfect because 1 + 2 + 4  +7 + 14 = 28
+
+12. Armstrong Number
+Write a function isArmstrong(num) that checks if a number is an Armstrong number number that equals the sum of its own digits, each raised to the power of the total number of digits).
+
+Example: 153 is Armstrong because 1³ + 5³ + 3³ = 153
+
+13. Find All Primes in Range
+Write a function primesInRange(start, end) that returns an array of all prime numbers between start and end (inclusive).
+
+14. Sum of Digits
+Write a function sumOfDigits(num) that returns the sum of all digits in a number.
+
+Example: sumOfDigits(1234) should return 10
+
+15. Reverse Number
+Write a function reverseNumber(num) that reverses the digits of a number.
+
+Example: reverseNumber(1234) should return 4321
+
+Recursion (Questions 16-20)
+16. Fibonacci Sequence
+Write a recursive function fibonacci(n) that returns the nth Fibonacci number.
+
+Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13...
+
+17. Sum of Natural Numbers
+Write a recursive function sumNatural(n) that returns the sum of first n natural numbers.
+
+Example: sumNatural(5) should return 15 (1+2+3+4+5)
+
+18. Power Function
+Write a recursive function power(base, exponent) that calculates base raised to the exponent.
+
+Example: power(2, 3) should return 8
+
+19. Count Down
+Write a recursive function countDown(num) that:
+
+Prints numbers from num down to 1
+Stops when it reaches 0
+Does NOT use a loop
+20. Array Sum (Recursive)
+Write a recursive function sumArrayRecursive(arr, index) that calculates the sum of all elements in an array without using a loop.
+
+Hint: Use index parameter to track position, default it to 0.
+
+Bonus Challenge:
+21. Combine Multiple Concepts
+Write a function analyzeArray(arr) that returns an object with:
+
+{
+    evenCount: number,
+    oddCount: number,
+    primeCount: number,
+    sum: number,
+    average: number,
+    max: number,
+    min: number
+}
