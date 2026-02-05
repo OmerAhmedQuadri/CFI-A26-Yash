@@ -1,0 +1,980 @@
+Instructions: Complete all sections. Nested loops are loops inside other loops. Test your code and write outputs where requested.
+
+Section 1: Understanding Nested Loops (10 Questions)
+Q1. What will be the output?
+
+let i = 0
+let j = 0
+
+while (i < 3) {
+    while (j < 2) {
+        console.log('i:', i, 'j:', j)
+        j++
+    }
+    i++
+}
+Your Prediction:
+
+Explanation: Why does j only go from 0 to 1?
+
+Q2. What will be the output?
+
+let i = 0
+
+while (i < 3) {
+    let j = 0
+    while (j < 2) {
+        console.log('i:', i, 'j:', j)
+        j++
+    }
+    i++
+}
+Your Prediction:
+
+Explanation: What's the difference from Q1?
+
+Q3. What will be the output?
+
+let i = 1
+
+while (i <= 3) {
+    let j = 1
+    while (j <= 2) {
+        console.log(i, 'x', j, '=', i * j)
+        j++
+    }
+    i++
+}
+Your Prediction:
+
+Q4. Create a nested loop that prints:
+
+Outer: 0, Inner: 0
+Outer: 0, Inner: 1
+Outer: 0, Inner: 2
+Outer: 1, Inner: 0
+Outer: 1, Inner: 1
+Outer: 1, Inner: 2
+Your Code:
+
+// Write your code here
+Q5. What will be the output?
+
+let i = 0
+
+while (i < 2) {
+    let j = 0
+    while (j < 3) {
+        console.log('*')
+        j++
+    }
+    console.log('---')
+    i++
+}
+Your Prediction:
+
+Q6. How many times will "Hello" be printed?
+
+let i = 0
+
+while (i < 4) {
+    let j = 0
+    while (j < 3) {
+        console.log('Hello')
+        j++
+    }
+    i++
+}
+Your Answer: _______________
+
+Formula: _______________________________________________
+
+Q7. Create a nested loop that prints numbers from the multiplication:
+
+1 2
+2 4
+3 6
+(Each row is i * 1, i * 2)
+
+Your Code:
+
+// Write your code here
+Q8. What will be the output?
+
+let i = 1
+
+while (i <= 2) {
+    console.log('Outer loop:', i)
+    let j = 1
+    while (j <= 3) {
+        console.log('  Inner loop:', j)
+        j++
+    }
+    i++
+}
+Your Prediction:
+
+Q9. Fill in the blanks:
+
+let i = 0
+while (i < ___) {      // Outer loop runs ___ times
+    let j = 0
+    while (j < ___) {  // Inner loop runs ___ times
+        console.log(i, j)
+        j++
+    }
+    i++
+}
+// Total prints: ___
+To print exactly 12 times.
+
+Q10. Explain in your own words: What is a nested loop?
+
+Your Answer:
+
+Section 2: Rectangle Patterns (8 Questions)
+Q11. What will be the output?
+
+let i = 0
+
+while (i < 3) {
+    let j = 0
+    let row = ''
+    while (j < 5) {
+        row = row + '* '
+        j++
+    }
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q12. Create a 4x6 rectangle pattern (4 rows, 6 columns):
+
+* * * * * *
+* * * * * *
+* * * * * *
+* * * * * *
+Your Code:
+
+// Write your code here
+Q13. Create a pattern with numbers:
+
+1 1 1 1
+2 2 2 2
+3 3 3 3
+Your Code:
+
+// Write your code here
+Q14. Create this pattern:
+
+# # # # #
+# # # # #
+# # # # #
+# # # # #
+# # # # #
+Your Code:
+
+// Write your code here
+Q15. What will be the output?
+
+let i = 1
+
+while (i <= 3) {
+    let j = 1
+    let row = ''
+    while (j <= 4) {
+        row = row + i + ' '
+        j++
+    }
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q16. Create this pattern (each row shows its row number):
+
+1 1 1 1 1
+2 2 2 2 2
+3 3 3 3 3
+4 4 4 4 4
+Your Code:
+
+// Write your code here
+Q17. Create this pattern (each column shows its column number):
+
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+Your Code:
+
+// Write your code here
+Q18. Create a 5x5 grid with alternating * and #:
+
+* # * # *
+# * # * #
+* # * # *
+# * # * #
+* # * # *
+Hint: Use (i + j) % 2 to alternate
+
+Your Code:
+
+// Write your code here
+Section 3: Right Triangle Patterns (10 Questions)
+Q19. What will be the output?
+
+let i = 1
+
+while (i <= 4) {
+    let j = 1
+    let row = ''
+    while (j <= i) {
+        row = row + '* '
+        j++
+    }
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q20. Create this pattern:
+
+*
+* *
+* * *
+* * * *
+* * * * *
+Your Code:
+
+// Write your code here
+Q21. Create this number pattern:
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+Your Code:
+
+// Write your code here
+Q22. Create this pattern:
+
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+Your Code:
+
+// Write your code here
+Q23. What will be the output?
+
+let i = 5
+
+while (i >= 1) {
+    let j = 1
+    let row = ''
+    while (j <= i) {
+        row = row + '* '
+        j++
+    }
+    console.log(row)
+    i--
+}
+Your Prediction:
+
+Q24. Create this inverted pattern:
+
+* * * * *
+* * * *
+* * *
+* *
+*
+Your Code:
+
+// Write your code here
+Q25. Create this pattern:
+
+5 4 3 2 1
+5 4 3 2
+5 4 3
+5 4
+5
+Your Code:
+
+// Write your code here
+Q26. Create this pattern (letters):
+
+A
+A B
+A B C
+A B C D
+A B C D E
+Hint: Use String.fromCharCode(65 + j) where 65 is 'A'
+
+Your Code:
+
+// Write your code here
+Q27. Create this pattern:
+
+#
+# #
+# # #
+# # # #
+# # # # #
+# # # # # #
+Your Code:
+
+// Write your code here
+Q28. Create this pattern (row number repeated):
+
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+6 6 6 6 6 6
+Your Code:
+
+// Write your code here
+Section 4: Number Patterns (10 Questions)
+Q29. What will be the output?
+
+let i = 1
+
+while (i <= 4) {
+    let j = 1
+    let row = ''
+    while (j <= i) {
+        row = row + j + ' '
+        j++
+    }
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q30. Create this pattern:
+
+1
+2 3
+4 5 6
+7 8 9 10
+(Continuous counting)
+
+Your Code:
+
+// Write your code here
+Q31. Create this pattern:
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+Your Code:
+
+// Write your code here
+Q32. Create this pattern:
+
+5
+5 4
+5 4 3
+5 4 3 2
+5 4 3 2 1
+Your Code:
+
+// Write your code here
+Q33. What will be the output?
+
+let i = 1
+let num = 1
+
+while (i <= 3) {
+    let j = 1
+    let row = ''
+    while (j <= i) {
+        row = row + num + ' '
+        num++
+        j++
+    }
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q34. Create this pattern (even numbers):
+
+2
+2 4
+2 4 6
+2 4 6 8
+Your Code:
+
+// Write your code here
+Q35. Create this pattern (odd numbers):
+
+1
+1 3
+1 3 5
+1 3 5 7
+1 3 5 7 9
+Your Code:
+
+// Write your code here
+Q36. Create this pattern (multiples of 5):
+
+5
+5 10
+5 10 15
+5 10 15 20
+Your Code:
+
+// Write your code here
+Q37. Create this pattern:
+
+10
+10 9
+10 9 8
+10 9 8 7
+10 9 8 7 6
+Your Code:
+
+// Write your code here
+Q38. Create this pattern (squares):
+
+1
+1 4
+1 4 9
+1 4 9 16
+(1², 2², 3², 4²)
+
+Your Code:
+
+// Write your code here
+Section 5: Multiplication Table (8 Questions)
+Q39. What will be the output?
+
+let i = 1
+
+while (i <= 3) {
+    let j = 1
+    while (j <= 5) {
+        console.log(i + ' x ' + j + ' = ' + (i * j))
+        j++
+    }
+    console.log('---')
+    i++
+}
+Your Prediction:
+
+Q40. Create a multiplication table for 2:
+
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+Your Code:
+
+// Write your code here
+Q41. Create multiplication tables for 1 to 5 (each 1 to 10).
+
+Your Code:
+
+// Write your code here
+Expected Output:
+
+1 x 1 = 1
+1 x 2 = 2
+...
+1 x 10 = 10
+---
+2 x 1 = 2
+2 x 2 = 4
+...
+5 x 10 = 50
+Q42. Create this multiplication pattern:
+
+1
+2 4
+3 6 9
+4 8 12 16
+(Each row: i×1, i×2, i×3...)
+
+Your Code:
+
+// Write your code here
+Q43. What will be the output?
+
+let i = 1
+
+while (i <= 3) {
+    let j = 1
+    let row = ''
+    while (j <= 4) {
+        row = row + (i * j) + ' '
+        j++
+    }
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q44. Create this pattern (products):
+
+1 2 3 4 5
+2 4 6 8 10
+3 6 9 12 15
+4 8 12 16 20
+5 10 15 20 25
+Your Code:
+
+// Write your code here
+Q45. Create a division table for numbers 10, 20, 30:
+
+10 / 1 = 10
+10 / 2 = 5
+...
+30 / 5 = 6
+Your Code:
+
+// Write your code here
+Q46. Create this pattern (addition):
+
+1 2 3
+2 3 4
+3 4 5
+4 5 6
+(Each cell = row + column)
+
+Your Code:
+
+// Write your code here
+Section 6: Space Patterns (10 Questions)
+Q47. What will be the output?
+
+let i = 1
+
+while (i <= 3) {
+    let spaces = 3 - i
+    let j = 0
+    let row = ''
+    
+    while (j < spaces) {
+        row = row + '  '
+        j++
+    }
+    
+    j = 0
+    while (j < i) {
+        row = row + '* '
+        j++
+    }
+    
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q48. Create this pattern:
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+Your Code:
+
+// Write your code here
+Q49. Create this pattern:
+
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+Your Code:
+
+// Write your code here
+Q50. Create this pyramid pattern:
+
+    1
+   1 2
+  1 2 3
+ 1 2 3 4
+1 2 3 4 5
+Your Code:
+
+// Write your code here
+Q51. What will be the output?
+
+let i = 1
+
+while (i <= 4) {
+    let j = 1
+    let row = ''
+    
+    while (j < i) {
+        row = row + '  '
+        j++
+    }
+    
+    j = i
+    while (j <= 4) {
+        row = row + '* '
+        j++
+    }
+    
+    console.log(row)
+    i++
+}
+Your Prediction:
+
+Q52. Create this pattern:
+
+*
+ * *
+  * * *
+   * * * *
+Your Code:
+
+// Write your code here
+Q53. Create this centered pattern:
+
+  *
+ * *
+* * *
+ * *
+  *
+Your Code:
+
+// Write your code here
+Q54. Create this number pyramid:
+
+    1
+   2 2
+  3 3 3
+ 4 4 4 4
+5 5 5 5 5
+Your Code:
+
+// Write your code here
+Q55. Create this pattern:
+
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+Your Code:
+
+// Write your code here
+Q56. Create this inverted pyramid:
+
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+Your Code:
+
+// Write your code here
+Section 7: Diamond Patterns (6 Questions)
+Q57. Create this diamond:
+
+  *
+ * *
+* * *
+ * *
+  *
+Your Code:
+
+// Write your code here
+Q58. Create this number diamond:
+
+  1
+ 1 2
+1 2 3
+ 1 2
+  1
+Your Code:
+
+// Write your code here
+Q59. Create this diamond:
+
+    *
+   * * *
+  * * * * *
+ * * * * * * *
+  * * * * *
+   * * *
+    *
+Your Code:
+
+// Write your code here
+Q60. Create this hollow diamond:
+
+  *
+ * *
+*   *
+ * *
+  *
+Your Code:
+
+// Write your code here
+Q61. Create this pattern:
+
+    1
+   2 2
+  3 3 3
+   2 2
+    1
+Your Code:
+
+// Write your code here
+Q62. Create this full diamond:
+
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *
+Your Code:
+
+// Write your code here
+Section 8: User Input Patterns (8 Questions)
+Q63. Create a program that asks for rows and creates a rectangle:
+
+Enter rows: 3
+Enter columns: 5
+
+* * * * *
+* * * * *
+* * * * *
+Your Code:
+
+// Write your code here
+Q64. Create a program that asks for a number and creates a right triangle of that size.
+
+Your Code:
+
+// Write your code here
+Q65. Create a program that:
+
+Asks for a number
+Prints multiplication table from 1 to that number
+Your Code:
+
+// Write your code here
+Q66. Create a program that:
+
+Asks for rows
+Asks for a character
+Prints right triangle with that character
+Your Code:
+
+// Write your code here
+Q67. Create a program that asks for a number and creates a number pyramid:
+
+Enter rows: 4
+
+   1
+  1 2
+ 1 2 3
+1 2 3 4
+Your Code:
+
+// Write your code here
+Q68. Create a program that asks for size and creates a square:
+
+Enter size: 4
+
+* * * *
+* * * *
+* * * *
+* * * *
+Your Code:
+
+// Write your code here
+Q69. Create a program that:
+
+Asks for a number (n)
+Prints all multiplication tables from 1 to n
+Your Code:
+
+// Write your code here
+Q70. Create a program that asks for rows and creates a diamond pattern.
+
+Your Code:
+
+// Write your code here
+Section 9: Advanced Patterns (8 Questions)
+Q71. Create this pattern:
+
+1 2 3 4 5
+2 3 4 5
+3 4 5
+4 5
+5
+Your Code:
+
+// Write your code here
+Q72. Create this pattern:
+
+A B C D E
+B C D E
+C D E
+D E
+E
+Your Code:
+
+// Write your code here
+Q73. Create this pattern (Floyd's triangle):
+
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+Your Code:
+
+// Write your code here
+Q74. Create this pattern:
+
+* * * * *
+* * * *
+* * *
+* *
+*
+* *
+* * *
+* * * *
+* * * * *
+Your Code:
+
+// Write your code here
+Q75. Create this hollow square:
+
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+Your Code:
+
+// Write your code here
+Q76. Create this pattern:
+
+1
+2 1
+3 2 1
+4 3 2 1
+5 4 3 2 1
+Your Code:
+
+// Write your code here
+Q77. Create this pattern (Pascal's triangle concept):
+
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+Your Code:
+
+// Write your code here
+Q78. Create this zigzag pattern:
+
+*       *
+  *   *
+    *
+  *   *
+*       *
+Your Code:
+
+// Write your code here
+Section 10: Challenge Problems (7 Questions)
+Q79. Create a program that prints all prime numbers in a 2D format:
+
+Row 1: 2 3 5 7
+Row 2: 11 13 17 19
+Row 3: 23 29 31 37
+(4 primes per row, 3 rows)
+
+Your Code:
+
+// Write your code here
+Q80. Create this butterfly pattern:
+
+*             *
+* *         * *
+* * *     * * *
+* * * * * * * *
+* * *     * * *
+* *         * *
+*             *
+Your Code:
+
+// Write your code here
+Q81. Create a multiplication table in grid format:
+
+   1  2  3  4  5
+1  1  2  3  4  5
+2  2  4  6  8 10
+3  3  6  9 12 15
+4  4  8 12 16 20
+5  5 10 15 20 25
+Your Code:
+
+// Write your code here
+Q82. Create this hourglass pattern:
+
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+Your Code:
+
+// Write your code here
+Q83. Create a program that generates a calendar-like grid showing numbers 1-28 in 7 columns (like 4 weeks).
+
+Your Code:
+
+// Write your code here
+Q84. Create this X pattern:
+
+*       *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*       *
+Your Code:
+
+// Write your code here
+Q85. Create a program that:
+
+Asks for a number n
+Creates an n×n spiral pattern with numbers
+Example for n=3:
+
+1 2 3
+8 9 4
+7 6 5
+Your Code:
+
+// Write your code here
