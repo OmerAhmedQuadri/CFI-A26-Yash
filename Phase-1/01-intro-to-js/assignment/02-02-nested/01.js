@@ -1540,43 +1540,50 @@
 // // }
 
 // //85
-// let n = 3;
+let n = 3;
 let matrix = Array.from({ length: n }, () => Array(n).fill(0));
+let matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+let num = 1;
+let top = 0, bottom = n - 1;
+let left = 0, right = n - 1;
 
-// let num = 1;
-// let top = 0, bottom = n - 1;
-// let left = 0, right = n - 1;
+while (num <= n * n) {
 
-// while (num <= n * n) {
+    // left → right
+    for (let i = left; i <= right; i++) {
+        matrix[top][i] = num++;
+    }
+    top++;
 
-//     // left → right
-//     for (let i = left; i <= right; i++) {
-//         matrix[top][i] = num++;
-//     }
-//     top++;
+    // top → bottom
+    for (let i = top; i <= bottom; i++) {
+        matrix[i][right] = num++;
+    }
+    right--;
 
-//     // top → bottom
-//     for (let i = top; i <= bottom; i++) {
-//         matrix[i][right] = num++;
-//     }
-//     right--;
+    // right → left
+    for (let i = right; i >= left; i--) {
+        matrix[bottom][i] = num++;
+    }
+    bottom--;
 
-//     // right → left
-//     for (let i = right; i >= left; i--) {
-//         matrix[bottom][i] = num++;
-//     }
-//     bottom--;
+    // bottom → top
+    for (let i = bottom; i >= top; i--) {
+        matrix[i][left] = num++;
+    }
+    left++;
+}
 
-//     // bottom → top
-//     for (let i = bottom; i >= top; i--) {
-//         matrix[i][left] = num++;
-//     }
-//     left++;
-// }
+// Print
+for (let row of matrix) {
+    console.log(row.join(' '));
+}
 
-// // Print
-// for (let row of matrix) {
-//     console.log(row.join(' '));
-// }
-
-console.log(Array);
+// console.log(Array);
+// let x = 153
+// let s = x.toString()
+// console.log(typeof s%10);

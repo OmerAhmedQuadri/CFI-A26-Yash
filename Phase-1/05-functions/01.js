@@ -6,13 +6,13 @@
 // console.log(sayHello);
 // sayHello()
 
-function sayHello(name) {
+export default function sayHello(name) {
     console.log('Hello', name);
 }
-function sayHello(nam2) {
-    console.log("Bye");
+// function sayHello(nam2) {
+//     console.log("Bye");
 
-}
+// }
 //when redeclared it takes the latest function bye not hello
 
 // sayHello('Yashwanth')

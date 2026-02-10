@@ -94,7 +94,7 @@ Does NOT use a loop
 20. Array Sum (Recursive)
 Write a recursive function sumArrayRecursive(arr, index) that calculates the sum of all elements in an array without using a loop.
 
-Hint: Use index parameter to track position, default it to 0.
+Hint: Use index parameter to tracky position, default it to 0.
 
 Bonus Challenge:
 21. Combine Multiple Concepts
