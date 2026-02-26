@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Omer",
+        "age": 21,
+        "city": "Hyd"
+    },
+    {
+        "name": "Fahad",
+        "age": 20,
+        "city": "Towli"
+    },
+    {
+        "name": "Fazal",
+        "age": 22,
+        "city": "Krmn"
+    },
+    {
+        "name": "Yash",
+        "age": 21,
+        "city": "Hyd"
+    }
+]

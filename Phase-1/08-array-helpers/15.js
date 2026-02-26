@@ -1,0 +1,32 @@
+// const nums = [23, 54, 96, 108, 73]
+
+// let res = nums.findIndex( (n) => {
+//     if(n%2 == 0) return true
+// })
+
+// let res2 = nums.findIndex( n => n>100)
+
+// console.log(res);
+// console.log(res2);
+
+
+const users = [
+    {name : 'omer', age : 17},
+    {name : 'zayd', age : 23},
+    {name : 'taha', age : 22},
+    {name : 'fahad', age : 21},
+    {name : 'atif', age : 21},
+    {name : 'yash', age : 21},
+    {name : 'haseeb', age : 20},
+    {name : 'a rahman', age : 22},
+    {name : 'anas', age : 24},
+    {name : 'maseeh', age : 23},
+    {name : 'afnan', age : 23},
+]
+
+let res = users.findIndex( (usr) => {
+    if(usr.age == 20)
+        return true
+})
+
+console.log(res);

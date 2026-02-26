@@ -1,0 +1,282 @@
+12 Feb 2026
+JavaScript Array Methods Assignment - 30 Questions
+.reduce(), .find(), .findIndex()
+Level 1 - Basics (Questions 1-10)
+Q1. You have this array:
+
+const nums = [5, 10, 15, 20, 25]
+Use .reduce() to find the sum of all numbers. Expected output: 75
+
+Q2. You have this array:
+
+const nums = [2, 3, 4, 5]
+Use .reduce() to find the product (multiplication) of all numbers. Expected output: 120
+
+Q3. You have this array:
+
+const nums = [45, 23, 67, 12, 89, 34]
+Use .reduce() to find the maximum number. Start with nums[0] as the initial value. Expected output: 89
+
+Q4. You have this array:
+
+const nums = [45, 23, 67, 12, 89, 34]
+Use .reduce() to find the minimum number. Start with nums[0] as the initial value. Expected output: 12
+
+Q5. You have this array:
+
+const words = ['hello', 'world', 'javascript', 'is', 'awesome']
+Use .reduce() to concatenate all words into a single string with spaces between them. Expected output: "hello world javascript is awesome"
+
+Q6. You have this array:
+
+const nums = [10, 20, 30, 40, 50]
+Use .find() to find the first number greater than 25. Expected output: 30
+
+Q7. You have this array:
+
+const users = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 30 },
+    { name: 'Charlie', age: 35 }
+]
+Use .find() to find the user with name 'Bob'. Expected output: { name: 'Bob', age: 30 }
+
+Q8. Using the same users array from Q7, use .findIndex() to find the index of the user named 'Charlie'. Expected output: 2
+
+Q9. You have this array:
+
+const nums = [5, 12, 8, 130, 44]
+Use .findIndex() to find the index of the first number greater than 100. Expected output: 3
+
+Q10. You have this array:
+
+const nums = [1, 2, 3, 4, 5]
+Use .reduce() without an initial value. What happens? Write your observation as a comment. Then run it with initial value 0 and compare the console logs.
+
+Level 2 - Intermediate (Questions 11-20)
+Q11. You have this array:
+
+const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple', 'grape']
+Use .reduce() to count the occurrences of each fruit. Return an object like:
+
+{ apple: 3, banana: 2, orange: 1, grape: 1 }
+Q12. You have this array:
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Use .reduce() to create two arrays: one with even numbers and one with odd numbers. Return an object:
+
+{ even: [2, 4, 6, 8, 10], odd: [1, 3, 5, 7, 9] }
+Q13. You have this array:
+
+const students = [
+    { name: 'Alice', marks: 85 },
+    { name: 'Bob', marks: 45 },
+    { name: 'Charlie', marks: 75 },
+    { name: 'David', marks: 92 }
+]
+Use .reduce() to find the average marks of all students. Expected output: 74.25
+
+Q14. Using the same students array from Q13, use .reduce() to find the student with the highest marks. Expected output: { name: 'David', marks: 92 }
+
+Q15. You have this array:
+
+const cart = [
+    { product: 'Shirt', price: 500, qty: 2 },
+    { product: 'Pants', price: 1200, qty: 1 },
+    { product: 'Shoes', price: 2000, qty: 1 },
+    { product: 'Cap', price: 300, qty: 3 }
+]
+Use .reduce() to calculate the total cart value (price × qty for all items). Expected output: 5200
+
+Q16. You have this array:
+
+const users = [
+    { name: 'Alice', age: 25, city: 'Mumbai' },
+    { name: 'Bob', age: 30, city: 'Delhi' },
+    { name: 'Charlie', age: 25, city: 'Mumbai' },
+    { name: 'David', age: 30, city: 'Mumbai' }
+]
+Use .reduce() to group users by city. Return an object like:
+
+{
+  Mumbai: [{ name: 'Alice', ... }, { name: 'Charlie', ... }, { name: 'David', ... }],
+  Delhi: [{ name: 'Bob', ... }]
+}
+Q17. You have this array:
+
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']
+Use .find() to find the first word that has more than 6 characters. Expected output: "exuberant"
+
+Q18. You have this array:
+
+const products = [
+    { id: 1, name: 'Laptop', inStock: false },
+    { id: 2, name: 'Phone', inStock: true },
+    { id: 3, name: 'Tablet', inStock: true }
+]
+Use .find() to find the first product that is in stock. Expected output: { id: 2, name: 'Phone', inStock: true }
+
+Q19. Using the same products array from Q18, use .findIndex() to find the index of the product with id 3. Expected output: 2
+
+Q20. You have this array:
+
+const nums = [3, 7, 12, 5, 8, 15, 20]
+Use .findIndex() to find the index of the first number divisible by 5. Expected output: 3 (value 5 is at index 3)
+
+Level 3 - Advanced (Questions 21-30)
+Q21. You have this array:
+
+const users = [
+    { name: 'Alice', age: 17, country: 'India' },
+    { name: 'Bob', age: 22, country: 'USA' },
+    { name: 'Charlie', age: 15, country: 'India' },
+    { name: 'David', age: 25, country: 'India' },
+    { name: 'Eve', age: 19, country: 'USA' }
+]
+Use .reduce() to group users by age groups:
+
+minors: age < 18
+adults: age >= 18 and age < 25
+seniors: age >= 25
+Return object like:
+
+{
+  minors: [{ name: 'Alice', ... }, { name: 'Charlie', ... }],
+  adults: [{ name: 'Bob', ... }, { name: 'Eve', ... }],
+  seniors: [{ name: 'David', ... }]
+}
+Q22. You have this array:
+
+const nums = [[1, 2], [3, 4], [5, 6], [7, 8]]
+Use .reduce() to flatten this 2D array into a single array. Expected output: [1, 2, 3, 4, 5, 6, 7, 8]
+
+Q23. You have this array:
+
+const transactions = [
+    { type: 'deposit', amount: 1000 },
+    { type: 'withdraw', amount: 500 },
+    { type: 'deposit', amount: 2000 },
+    { type: 'withdraw', amount: 300 },
+    { type: 'deposit', amount: 1500 }
+]
+Use .reduce() to calculate the final balance. Start with 0. Add for deposits, subtract for withdrawals. Expected output: 3700
+
+Q24. You have this array:
+
+const words = ['hello', 'world', 'this', 'is', 'javascript']
+Use .reduce() to find the longest word. Expected output: "javascript"
+
+Q25. You have this array:
+
+const students = [
+    { name: 'Alice', subjects: ['Math', 'Science'] },
+    { name: 'Bob', subjects: ['English', 'Math'] },
+    { name: 'Charlie', subjects: ['Science', 'History'] }
+]
+Use .reduce() to get all unique subjects in a single array. Expected output: ['Math', 'Science', 'English', 'History']
+
+Hint: You'll need to check if subject already exists before adding it.
+
+Q26. You have this array:
+
+const nums = [5, 10, 15, 20, 25, 30]
+Use .reduce() to create an object where keys are the numbers and values are whether they're divisible by 10. Expected output:
+
+{
+  5: false,
+  10: true,
+  15: false,
+  20: true,
+  25: false,
+  30: true
+}
+Q27. You have this array:
+
+const employees = [
+    { name: 'John', department: 'Engineering', salary: 80000 },
+    { name: 'Jane', department: 'Design', salary: 70000 },
+    { name: 'Mark', department: 'Engineering', salary: 90000 },
+    { name: 'Sara', department: 'HR', salary: 60000 },
+    { name: 'Tom', department: 'Engineering', salary: 85000 }
+]
+Use .reduce() to calculate the total salary expense per department. Expected output:
+
+{
+  Engineering: 255000,
+  Design: 70000,
+  HR: 60000
+}
+Q28. You have this array:
+
+const votes = ['Alice', 'Bob', 'Alice', 'Charlie', 'Bob', 'Alice', 'Charlie', 'Alice']
+Use .reduce() to count votes and find the winner (person with most votes). First create vote count object, then find the max. Expected output: "Alice" (with 4 votes)
+
+Q29. You have this array:
+
+const products = [
+    { id: 1, name: 'Laptop', price: 50000 },
+    { id: 2, name: 'Phone', price: 20000 },
+    { id: 3, name: 'Tablet', price: 30000 }
+]
+Use .reduce() to convert this array into an object where product id is the key. Expected output:
+
+{
+  1: { id: 1, name: 'Laptop', price: 50000 },
+  2: { id: 2, name: 'Phone', price: 20000 },
+  3: { id: 3, name: 'Tablet', price: 30000 }
+}
+Q30. FINAL CHALLENGE: You have this array:
+
+const orders = [
+    { userId: 1, items: [{ price: 100 }, { price: 200 }] },
+    { userId: 2, items: [{ price: 150 }] },
+    { userId: 1, items: [{ price: 300 }] },
+    { userId: 3, items: [{ price: 250 }, { price: 100 }] },
+    { userId: 2, items: [{ price: 200 }, { price: 150 }] }
+]
+Do the following using .reduce():
+
+Group orders by userId
+For each user, calculate their total spending (sum of all item prices across all their orders)
+Expected output:
+
+{
+  1: 600,   // (100 + 200 + 300)
+  2: 500,   // (150 + 200 + 150)
+  3: 350    // (250 + 100)
+}
+Hint: You'll need nested reduce or a combination of reduce and other methods.
+
+Bonus Challenges
+BONUS 1: Recreate .map() using .reduce(). Write a function called myMap that works exactly like .map() but uses .reduce() internally.
+
+BONUS 2: Recreate .filter() using .reduce(). Write a function called myFilter that works exactly like .filter() but uses .reduce() internally.
+
+BONUS 3: You have this nested array:
+
+const data = [1, [2, [3, [4, [5]]]]]
+Use .reduce() to flatten it completely (all levels). Expected output: [1, 2, 3, 4, 5]
+
+Submission Guidelines
+Write each question number as a comment
+Write your solution below each question
+Test each solution using console.log()
+If stuck, write what you tried and where you got confused
+Important: For reduce questions, add a console.log(acc, curr) inside the callback to see what's happening - this helps understand how reduce works!
+Key Concepts to Remember
+.reduce() pattern:
+array.reduce((accumulator, currentValue) => {
+    // Logic to update accumulator
+    return accumulator;  // MUST return accumulator
+}, initialValue);  // Don't forget initial value!
+.find() returns:
+The element itself (or undefined)
+.findIndex() returns:
+The index number (or -1 if not found)
+Common reduce use cases:
+Sum/Product: Start with 0 or 1
+Count: Start with empty object {}
+Group: Start with empty object {}
+Flatten: Start with empty array []
+Convert array to object: Start with {}
+Find max/min: Start with arr[0]

@@ -1,0 +1,338 @@
+JavaScript Array Methods Assignment - 40 Questions
+indexOf, lastIndexOf, includes, some, every, push, pop, shift, unshift, slice, splice, concat, join, split, reverse, sort, flat, fill, at, toString, toLocaleString, toReversed
+Level 1 - Basics (Questions 1-15)
+Q1. You have this array:
+
+const nums = [10, 20, 30, 40, 50, 30, 60];
+Use .indexOf() to find the first occurrence of 30. Expected output: 2
+
+Q2. Using the same array from Q1, use .indexOf() to find 30 starting from index 3. Expected output: 5
+
+Q3. You have this array:
+
+const colors = ['red', 'blue', 'green', 'blue', 'yellow'];
+Use .lastIndexOf() to find the last occurrence of 'blue'. Expected output: 3
+
+Q4. You have this array:
+
+const nums = [1, 2, NaN, 4, 5];
+Try to find NaN using .indexOf() and .includes(). What's the difference? Write your answer as a comment.
+
+Q5. You have this array:
+
+const permissions = ['read', 'write', 'execute'];
+const userPermission = 'write';
+Use .includes() to check if the user has the required permission. Print "Access Granted" or "Access Denied".
+
+Q6. You have this array:
+
+const nums = [2, 4, 6, 8, 10];
+Use .every() to check if all numbers are even. Expected output: true
+
+Q7. You have this array:
+
+const nums = [1, 2, 3, 4, 5, 6];
+Use .some() to check if there's at least one number greater than 5. Expected output: true
+
+Q8. You have this array:
+
+const users = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 17 },
+    { name: 'Charlie', age: 30 }
+];
+Use .every() to check if all users are adults (age >= 18). Expected output: false
+
+Q9. Using the same users array from Q8, use .some() to check if there's at least one user under 18. Expected output: true
+
+Q10. You have this array:
+
+const stack = [];
+Use .push() to add 'A', 'B', 'C' to the stack. Then use .pop() twice. What's left in the array? What did .pop() return each time?
+
+Q11. You have this array:
+
+const queue = ['task1', 'task2', 'task3'];
+Use .shift() to remove the first task, then .unshift() to add 'urgent-task' at the beginning. Print the final array.
+
+Q12. You have this array:
+
+const fruits = ['apple', 'banana', 'orange', 'grape', 'mango'];
+Use .slice() to extract ['banana', 'orange', 'grape']. Expected output: ['banana', 'orange', 'grape']
+
+Q13. Using the same fruits array from Q12, use .slice() with negative indices to get the last 2 fruits. Expected output: ['grape', 'mango']
+
+Q14. You have this array:
+
+const nums = [1, 2, 3, 4, 5];
+Use .splice() to remove elements at index 2 and 3, and insert 99 and 88 in their place. What does .splice() return?
+
+Q15. You have this array:
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+Use .concat() to combine them. Then do the same using the spread operator .... Are both results the same?
+
+Level 2 - Intermediate (Questions 16-28)
+Q16. You have this array:
+
+const words = ['JavaScript', 'is', 'awesome'];
+Use .join() to create:
+
+"JavaScript is awesome" (space separator)
+"JavaScript-is-awesome" (dash separator)
+"JavaScriptisawesome" (no separator)
+Q17. You have this string:
+
+const csv = "John,Doe,30,john@example.com";
+Use .split() to convert it into an array. Expected output: ['John', 'Doe', '30', 'john@example.com']
+
+Q18. You have this array:
+
+const nums = [1, 2, 3, 4, 5];
+Use .reverse() to reverse it. Does .reverse() mutate the original array? Write your answer as a comment.
+
+Q19. You have this string:
+
+const str = "JavaScript";
+Reverse the string using .split(), .reverse(), and .join(). Expected output: "tpircSavaJ"
+
+Q20. You have this array:
+
+const words = ['zebra', 'apple', 'mango', 'banana'];
+Use .sort() to sort alphabetically. Expected output: ['apple', 'banana', 'mango', 'zebra']
+
+Q21. You have this array:
+
+const nums = [100, 5, 20, 10, 1000];
+Sort it in ascending order (smallest to largest) using .sort() with a compare function. Expected output: [5, 10, 20, 100, 1000]
+
+Q22. Using the same array from Q21, sort it in descending order (largest to smallest). Expected output: [1000, 100, 20, 10, 5]
+
+Q23. You have this array:
+
+const users = [
+    { name: 'Charlie', age: 35 },
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 30 }
+];
+Sort by age in ascending order using .sort(). Expected output: Alice (25), Bob (30), Charlie (35)
+
+Q24. Using the same users array from Q23, sort by name alphabetically. Use .localeCompare() for string comparison.
+
+Q25. You have this nested array:
+
+const nested = [1, [2, 3], [4, [5, 6]]];
+Use .flat() with depth 2 to flatten it. Expected output: [1, 2, 3, 4, 5, 6]
+
+Q26. You have this array:
+
+const arr = [1, 2, 3, 4, 5];
+Use .fill() to replace indices 1 to 3 (not including 3) with 0. Expected output: [1, 0, 0, 4, 5]
+
+Q27. You have this array:
+
+const fruits = ['apple', 'banana', 'orange', 'grape'];
+Use .at() to:
+
+Get the first element
+Get the last element (using negative index)
+Get the second to last element
+Q28. You have this array:
+
+const nums = [1, 2, [3, [4, [5]]]];
+Use .toString() to convert it to a string. What happens to the nested arrays?
+
+Level 3 - Advanced (Questions 29-40)
+Q29. You have this array:
+
+const prices = [1000.50, 2500.75, 500.99];
+Use .toLocaleString() to format as:
+
+Indian Rupees (INR)
+US Dollars (USD)
+Euros (EUR)
+Q30. You have this array:
+
+const nums = [1, 2, 3, 4, 5];
+Use .toReversed() to create a reversed copy. Does the original array change? Compare with .reverse().
+
+Q31. You have this array:
+
+const items = ['apple', 'banana', 'orange', 'grape', 'mango'];
+Write a function removeItem(arr, item) that uses .indexOf() and .splice() to remove the first occurrence of an item. Test with removing 'orange'.
+
+Q32. You have this array:
+
+const nums = [5, 10, 15, 20, 25, 30, 15, 35];
+Write a function to find ALL indices where 15 appears (not just first or last). Use a loop with .indexOf() and fromIndex. Expected output: [2, 6]
+
+Q33. You have this array:
+
+const products = [
+    { name: 'Laptop', price: 50000, inStock: true },
+    { name: 'Phone', price: 20000, inStock: false },
+    { name: 'Tablet', price: 30000, inStock: true },
+    { name: 'Watch', price: 5000, inStock: false }
+];
+Use .some() and .every() to check:
+
+Is at least one product in stock?
+Are all products in stock?
+Is any product priced above 40000?
+Are all products priced below 60000?
+Q34. You have this array:
+
+const students = [
+    { name: 'Alice', marks: [85, 90, 88] },
+    { name: 'Bob', marks: [70, 65, 72] },
+    { name: 'Charlie', marks: [95, 92, 98] }
+];
+Use .every() to check if all of Alice's marks are above 80. Then check if Bob has any mark above 70 using .some().
+
+Q35. You have this array representing a shopping cart:
+
+const cart = ['item1', 'item2', 'item3'];
+Implement these functions using array methods:
+
+addToCart(item) - adds item to end
+removeFromCart() - removes last item
+viewNextItem() - shows first item without removing
+processNextItem() - removes and returns first item
+Test all functions and print the cart state after each operation.
+
+Q36. You have two arrays:
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [4, 5, 6, 7, 8];
+Write a function to find:
+
+Common elements (intersection) - elements in both arrays
+Unique to arr1 - elements only in arr1
+Union - all unique elements from both arrays
+Use .includes(), .filter(), and other methods.
+
+Q37. You have this array:
+
+const sentence = "the quick brown fox jumps over the lazy dog";
+Split the sentence into words, sort them alphabetically, then join them back with hyphens. Expected output: "brown-dog-fox-jumps-lazy-over-quick-the-the"
+
+Q38. You have this array:
+
+const nums = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+Sort it, then remove duplicates. The final array should be sorted with no duplicates. Expected output: [1, 2, 3, 4, 5, 6, 9]
+
+Hint: Use .sort(), then use .filter() with .indexOf() to keep only first occurrence.
+
+Q39. You have this deeply nested array:
+
+const data = [1, [2, [3, [4, [5, [6, [7]]]]]]];
+Flatten it completely using .flat(Infinity). Then:
+
+Sort in descending order
+Keep only even numbers
+Find the sum using .reduce()
+Q40. FINAL CHALLENGE: You have this e-commerce data:
+
+const orders = [
+    {
+        orderId: 1,
+        customer: 'Alice',
+        items: ['Laptop', 'Mouse', 'Keyboard'],
+        total: 55000,
+        status: 'delivered'
+    },
+    {
+        orderId: 2,
+        customer: 'Bob',
+        items: ['Phone'],
+        total: 20000,
+        status: 'pending'
+    },
+    {
+        orderId: 3,
+        customer: 'Charlie',
+        items: ['Tablet', 'Headphones'],
+        total: 32000,
+        status: 'delivered'
+    },
+    {
+        orderId: 4,
+        customer: 'Alice',
+        items: ['Watch'],
+        total: 5000,
+        status: 'delivered'
+    }
+];
+Do the following:
+
+Use .some() to check if there are any pending orders
+Use .every() to check if all orders are delivered
+Use .filter() to get all delivered orders
+Use .reduce() to calculate total revenue from delivered orders only
+Use .sort() to sort orders by total (highest first)
+Use .flat() to get a single array of all items ordered
+Count how many orders Alice has using .filter()
+Find the average order value using .reduce()
+Print all results with proper labels.
+
+Bonus Challenges
+BONUS 1: Write a function deepFlatten(arr) that flattens an array of any depth without using .flat(). Use recursion or a loop with .concat().
+
+BONUS 2: Write a function customSort(arr, order) where:
+
+If order = 'asc', sort ascending
+If order = 'desc', sort descending
+If order = 'random', shuffle randomly
+BONUS 3: Implement a simple Undo/Redo system using arrays:
+
+const history = [];
+let currentIndex = -1;
+
+function addAction(action) {
+    // Add action and update index
+}
+
+function undo() {
+    // Go back one action
+}
+
+function redo() {
+    // Go forward one action
+}
+Test with actions: ['add', 'delete', 'edit', 'save']
+
+Submission Guidelines
+Create a folder for the assignment
+Write each question as a comment
+Write your solution below each question
+Test each solution using console.log()
+For questions asking "does it mutate?", write your answer as a comment after testing
+Key Concepts to Remember
+Mutating Methods (Change original array):
+push(), pop(), shift(), unshift()
+splice()
+reverse(), sort()
+fill()
+Non-Mutating Methods (Return new array/value):
+slice(), concat()
+join() (returns string)
+indexOf(), lastIndexOf(), includes() (return number/boolean)
+some(), every() (return boolean)
+flat()
+toReversed() (ES2023)
+Common Patterns
+Remove item by value:
+
+const index = arr.indexOf(item);
+if (index !== -1) arr.splice(index, 1);
+Check existence:
+
+if (arr.includes(item)) { /* ... */ }
+Sort numbers:
+
+arr.sort((a, b) => a - b); // ascending
+arr.sort((a, b) => b - a); // descending
+Reverse string:
+
+str.split('').reverse().join('');

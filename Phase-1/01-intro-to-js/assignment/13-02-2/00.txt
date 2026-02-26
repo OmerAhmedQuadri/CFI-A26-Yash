@@ -1,0 +1,276 @@
+13 Feb Session - 2
+JavaScript Objects and Classes Assignment - 15 Questions
+Objects, Object Methods, OOPS, Classes, Constructors
+Level 1 - Object Basics (Questions 1-5)
+Q1. Create an object called car with the following properties:
+
+brand: 'Toyota'
+model: 'Camry'
+year: 2020
+price: 2500000
+Add a method called getInfo() that returns a string: "Toyota Camry (2020) - ₹2500000"
+
+Test by calling car.getInfo().
+
+Q2. Create an object called calculator with properties:
+
+num1: 0
+num2: 0
+Add these methods:
+
+setNumbers(a, b): sets num1 and num2
+add(): returns num1 + num2
+subtract(): returns num1 - num2
+multiply(): returns num1 * num2
+divide(): returns num1 / num2 (handle division by zero)
+Test all methods with different numbers.
+
+Q3. Create an object student with:
+
+name: 'Rahul'
+marks: [85, 90, 78, 92, 88]
+Add methods:
+
+getAverage(): returns average of all marks
+getHighest(): returns highest mark
+getLowest(): returns lowest mark
+hasPassed(): returns true if average >= 50
+Test all methods.
+
+Q4. Create an object counter with:
+
+count: 0
+Add methods:
+
+increment(): increases count by 1 and returns new count
+decrement(): decreases count by 1 and returns new count
+reset(): sets count to 0
+getValue(): returns current count
+Test by calling: increment 5 times, decrement 2 times, then reset.
+
+Q5. Create an object product with:
+
+name: 'Laptop'
+price: 50000
+discount: 0 (percentage)
+Add methods:
+
+applyDiscount(percentage): sets discount (validate: 0-100)
+getFinalPrice(): returns price after discount
+removeDiscount(): sets discount to 0
+Test by applying 10% discount, then removing it.
+
+Level 2 - Classes (Questions 6-10)
+Q6. Create a class BankAccount with:
+
+Private field #balance
+Constructor takes: accountHolder, initialBalance
+Add methods:
+
+deposit(amount): adds to balance (validate positive number)
+withdraw(amount): subtracts from balance (check sufficient funds)
+getBalance(): returns balance
+getAccountInfo(): returns holder name and balance
+Create 2 accounts and test all operations.
+
+Q7. Create a class Rectangle with:
+
+Properties: width, height
+Constructor to set width and height
+Add methods:
+
+getArea(): returns width × height
+getPerimeter(): returns 2 × (width + height)
+isSquare(): returns true if width === height
+scale(factor): multiplies both dimensions by factor
+Create a rectangle (4, 6) and test all methods.
+
+Q8. Create a class TodoList with:
+
+Private field #todos (array)
+Constructor initializes empty array
+Add methods:
+
+addTodo(task): adds task to array
+removeTodo(index): removes task at index
+getTodos(): returns copy of todos array
+getTodoCount(): returns number of todos
+clearAll(): empties the array
+Test by adding 5 todos, removing 1, and checking count.
+
+Q9. Create a class Temperature with:
+
+Private field #celsius
+Constructor takes celsius value
+Add methods:
+
+getCelsius(): returns celsius
+getFahrenheit(): returns celsius converted to fahrenheit (C × 9/5 + 32)
+getKelvin(): returns celsius converted to kelvin (C + 273.15)
+setCelsius(value): updates celsius (validate >= -273.15)
+Test with temperature 25°C.
+
+Q10. Create a class ShoppingCart with:
+
+Private field #items (array of objects: { name, price, quantity })
+Add methods:
+
+addItem(name, price, quantity): adds item to cart
+removeItem(name): removes item by name
+getTotal(): returns total price (price × quantity for all items)
+getItemCount(): returns total number of items
+displayCart(): prints all items with details
+Test by adding 3 items, removing 1, and calculating total.
+
+Level 3 - Inheritance & Advanced (Questions 11-15)
+Q11. Create a parent class Vehicle with:
+
+Properties: brand, year
+Method getInfo(): returns brand and year
+Create child class Car that extends Vehicle with:
+
+Additional property: model
+Override getInfo(): includes model
+Method start(): prints "Car is starting"
+Create child class Bike that extends Vehicle with:
+
+Additional property: type (sports/cruiser)
+Override getInfo(): includes type
+Method start(): prints "Bike is starting"
+Create instances of both and test.
+
+Q12. Create a parent class Employee with:
+
+Properties: name, id, salary
+Method getDetails(): returns employee info
+Method calculateBonus(): returns salary × 0.1 (10%)
+Create child class Manager that extends Employee with:
+
+Additional property: teamSize
+Override calculateBonus(): returns salary × 0.2 + (teamSize × 1000)
+Create child class Developer that extends Employee with:
+
+Additional property: programmingLanguages (array)
+Override calculateBonus(): returns salary × 0.15
+Method getSkills(): returns languages joined by comma
+Create instances and compare bonuses.
+
+Q13. Create a parent class MediaPlayer with:
+
+Properties: title, duration
+Method play(): prints "Playing: [title]"
+Method pause(): prints "Paused"
+Create child class VideoPlayer that extends MediaPlayer with:
+
+Additional property: resolution
+Override play(): prints "Playing video: [title] at [resolution]"
+Method fullscreen(): prints "Video in fullscreen"
+Create child class AudioPlayer that extends MediaPlayer with:
+
+Additional property: artist
+Override play(): prints "Playing song: [title] by [artist]"
+Method shuffle(): prints "Shuffle enabled"
+Test both players.
+
+Q14. Create a class Circle with:
+
+Static property PI = 3.14159
+Property: radius
+Method getArea(): returns π × radius²
+Method getCircumference(): returns 2 × π × radius
+Create a class Cylinder that extends Circle with:
+
+Additional property: height
+Method getVolume(): returns area × height
+Method getSurfaceArea(): returns 2 × π × radius × (radius + height)
+Create a cylinder with radius 5 and height 10. Calculate all values.
+
+Q15. FINAL CHALLENGE: Create a mini library system.
+
+Create class Book with:
+
+Private field #available = true
+Properties: title, author, isbn
+Method isAvailable(): returns availability
+Method borrow(): sets available to false if available, returns success/failure
+Method return(): sets available to true
+Create class Library with:
+
+Private field #books (array)
+Method addBook(book): adds book to library
+Method findBook(isbn): returns book by ISBN
+Method borrowBook(isbn): borrows book if available
+Method returnBook(isbn): returns book
+Method getAvailableBooks(): returns array of available books
+Method getAllBooks(): returns all books count
+Test the complete system:
+
+Create 3 books
+Add them to library
+Borrow 2 books
+Try to borrow the same book again (should fail)
+Return 1 book
+List available books
+Bonus Challenge
+BONUS: Create a GameCharacter class hierarchy:
+
+Parent class Character:
+
+Properties: name, health, level
+Method attack(): returns damage based on level
+Method takeDamage(amount): reduces health
+Method isAlive(): returns health > 0
+Child class Warrior:
+
+Additional property: strength
+Override attack(): damage = level × strength
+Method specialAttack(): damage = level × strength × 2
+Child class Mage:
+
+Additional property: mana
+Override attack(): damage = level × 10
+Method castSpell(): uses mana, returns damage = level × 20
+Create 2 characters, make them battle, and determine winner.
+
+Key Concepts to Remember
+Object Methods:
+const obj = {
+    property: 'value',
+    method: function() {
+        return this.property; // 'this' refers to obj
+    }
+};
+Classes:
+class MyClass {
+    #privateField = 0; // Private (ES2022)
+    
+    constructor(param) {
+        this.publicField = param;
+    }
+    
+    method() {
+        return this.publicField;
+    }
+}
+Inheritance:
+class Child extends Parent {
+    constructor(param1, param2) {
+        super(param1); // Call parent constructor
+        this.childProperty = param2;
+    }
+    
+    method() {
+        super.method(); // Call parent method
+        // Additional code
+    }
+}
+Static Properties:
+class MyClass {
+    static staticProperty = 'value';
+    
+    static staticMethod() {
+        return MyClass.staticProperty;
+    }
+}
+
+console.log(MyClass.staticProperty); // Access on class

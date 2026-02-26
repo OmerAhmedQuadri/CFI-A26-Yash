@@ -1,0 +1,239 @@
+Skip to content
+ 
+Search Gists
+Search...
+All gists
+Back to GitHub
+@OmerAhmedQuadri
+OmerAhmedQuadri/JS-assignment-10.md Secret
+Created 21 minutes ago • Report abuse
+Code
+Revisions
+1
+Clone this repository at &lt;script src=&quot;https://gist.github.com/OmerAhmedQuadri/111ed33362b93b16d7e653aaa729c733.js&quot;&gt;&lt;/script&gt;
+<script src="https://gist.github.com/OmerAhmedQuadri/111ed33362b93b16d7e653aaa729c733.js"></script>
+JS-assignment-10.md
+10 Feb 2026
+JavaScript Array Methods & Objects - 30 Assignment Questions
+Level 1 - Basics (Questions 1-10)
+Q1. You have this array:
+
+const nums = [1, 2, 3, 4, 5]
+Use .map() to return a new array where every number is multiplied by 3. Expected output: [3, 6, 9, 12, 15]
+
+Q2. You have this array:
+
+const nums = [10, 20, 30, 40, 50]
+Use .map() to return a new array where every number is divided by 10. Expected output: [1, 2, 3, 4, 5]
+
+Q3. You have this array:
+
+const words = ['hello', 'world', 'javascript']
+Use .map() to return a new array where every word is in UPPERCASE. Expected output: ['HELLO', 'WORLD', 'JAVASCRIPT']
+
+Q4. You have this array:
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Use .filter() to return only the odd numbers. Expected output: [1, 3, 5, 7, 9]
+
+Q5. You have this array:
+
+const nums = [5, 12, 3, 18, 25, 7, 30]
+Use .filter() to return only numbers greater than 10. Expected output: [12, 18, 25, 30]
+
+Q6. You have this array:
+
+const names = ['Ali', 'Bob', 'Sam', 'John', 'Jo']
+Use .filter() to return only names that have more than 3 characters. Expected output: ['John']
+
+Q7. You have this array:
+
+const nums = [1, 2, 3, 4, 5]
+Use .forEach() to print every number multiplied by 5. What is the return value of .forEach()? Write your answer as a comment.
+
+Q8. What is the difference between .map() and .forEach()? Write your answer as comments in code. Then prove it with an example.
+
+Q9. You have this object:
+
+const student = {
+    name: 'Rahul',
+    age: 22,
+    city: 'Mumbai',
+    course: 'Fullstack'
+}
+Use Object.keys() to print all the keys. Use Object.values() to print all the values.
+
+Q10. You have this array:
+
+const nums = [1, 2, 3, 4, 5]
+Without using .map(), write a regular for loop that does the same thing as:
+
+nums.map(n => n * 2)
+This is to understand what .map() is doing under the hood.
+
+Level 2 - Intermediate (Questions 11-20)
+Q11. You have this array:
+
+const prices = [100, 200, 350, 400, 150]
+Use .map() to apply an 18% GST to every price and return a new array with prices rounded to 2 decimal places.
+
+Q12. You have this array:
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Chain .filter() and .map() together. First filter even numbers, then double them. Expected output: [4, 8, 12, 16, 20]
+
+Q13. You have this array of objects:
+
+const students = [
+    { name: 'Alice', marks: 85 },
+    { name: 'Bob', marks: 42 },
+    { name: 'Charlie', marks: 76 },
+    { name: 'David', marks: 35 },
+    { name: 'Eve', marks: 90 }
+]
+Use .filter() to return only students who passed (marks >= 50).
+
+Q14. Using the same students array from Q13, use .map() to return a new array that contains only the names of all students. Expected output: ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+
+Q15. Using the same students array from Q13, use .map() to add a new property grade to each student:
+
+marks >= 80 → grade: 'A'
+marks >= 60 → grade: 'B'
+marks >= 50 → grade: 'C'
+marks < 50 → grade: 'F'
+Q16. You have this array:
+
+const words = ['cat', 'elephant', 'dog', 'hippopotamus', 'rat']
+Use .filter() to return only words with more than 4 characters, then use .map() to capitalize the first letter of each word. Expected output: ['Elephant', 'Hippopotamus']
+
+Q17. You have this array:
+
+const emails = ['Alice@Gmail.com', 'BOB@YAHOO.COM', 'charlie@hotmail.COM']
+Use .map() to return all emails in lowercase. Expected output: ['alice@gmail.com', 'bob@yahoo.com', 'charlie@hotmail.com']
+
+Q18. You have this array:
+
+const nums = [1, 2, 3, 4, 5]
+Use .map() to return an array of objects like this: Expected output:
+
+[
+  { value: 1, square: 1 },
+  { value: 2, square: 4 },
+  { value: 3, square: 9 },
+  { value: 4, square: 16 },
+  { value: 5, square: 25 }
+]
+Q19. You have this object:
+
+const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 28,
+    email: 'john@example.com',
+    isActive: true
+}
+Use Object.keys() and .forEach() together to print every key and its value like:
+
+firstName: John
+lastName: Doe
+...
+Q20. You have this array:
+
+const nums = [-5, -3, 0, 2, 4, -1, 7, -8]
+Use .filter() to return only positive numbers (greater than 0), then use .map() to return their squares.
+
+Level 3 - Challenge (Questions 21-30)
+Q21. You have this array:
+
+const cart = [
+    { product: 'Shirt', price: 500, qty: 2 },
+    { product: 'Pants', price: 1200, qty: 1 },
+    { product: 'Shoes', price: 2000, qty: 1 },
+    { product: 'Cap', price: 300, qty: 3 }
+]
+Use .map() to add a total property to each item (price * qty).
+
+Q22. Using the same cart array from Q21, use .filter() to return only items where the total (price × qty) is greater than 1000.
+
+Q23. You have this array:
+
+const users = [
+    { name: 'Alice', age: 17, country: 'India' },
+    { name: 'Bob', age: 22, country: 'USA' },
+    { name: 'Charlie', age: 15, country: 'India' },
+    { name: 'David', age: 25, country: 'India' },
+    { name: 'Eve', age: 19, country: 'USA' }
+]
+Filter only users who are from India AND are 18 or older.
+
+Q24. Using the same users array from Q23, use .map() after filtering to return only their names. Expected output: ['David']
+
+Q25. You have this array:
+
+const sentences = ['hello world', 'i love javascript', 'coding is fun']
+Use .map() to return each sentence in title case (first letter of each word capitalized). Expected output: ['Hello World', 'I Love Javascript', 'Coding Is Fun']
+
+Q26. You have this array:
+
+const data = [1, 'two', 3, 'four', 5, 'six', 7]
+Use .filter() to return only numbers (hint: use typeof). Expected output: [1, 3, 5, 7]
+
+Q27. You have this array of objects:
+
+const employees = [
+    { name: 'John', department: 'Engineering', salary: 80000 },
+    { name: 'Jane', department: 'Design', salary: 70000 },
+    { name: 'Mark', department: 'Engineering', salary: 90000 },
+    { name: 'Sara', department: 'HR', salary: 60000 },
+    { name: 'Tom', department: 'Engineering', salary: 85000 }
+]
+Filter only Engineering department employees, then use .map() to give them all a 10% salary raise.
+
+Q28. Using the same employees array from Q27, use .forEach() to print a message for each employee:
+
+John works in Engineering and earns 80000
+Jane works in Design and earns 70000
+...
+Q29. You have this array:
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Without using .filter(), replicate the behavior of .filter() using .map(). Return the even numbers but use only .map(). What problem do you notice with this approach? Write your observation as a comment.
+
+Q30. You have this array:
+
+const products = [
+    { name: 'Laptop', price: 50000, inStock: true },
+    { name: 'Phone', price: 20000, inStock: false },
+    { name: 'Tablet', price: 30000, inStock: true },
+    { name: 'Watch', price: 5000, inStock: false },
+    { name: 'Headphones', price: 3000, inStock: true }
+]
+Final Challenge: Do all three of the following in one chain:
+
+Filter only products that are inStock
+Apply a 10% discount to their prices using .map()
+Use .forEach() to print: Laptop is available for ₹45000
+Submission Rules
+Attempt every question in a .js file
+Add a comment above each question number
+If stuck, write what you tried and where you got confused
+Remember
+.map() → transforms, returns new array, same length
+.filter() → selects, returns new array, shorter or equal length
+.forEach() → iterates, returns nothing (undefined)
+@byashwanthreddy9036-ux
+Comment
+ 
+Leave a comment
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
