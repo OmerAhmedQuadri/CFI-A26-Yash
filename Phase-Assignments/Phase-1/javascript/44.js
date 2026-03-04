@@ -11,3 +11,7 @@ console.log({} + []);//object + empty string
 //
 // [object Object]
 // [object Object]
+
+console.log({});
+console.log([]);
+console.log({}+{});

@@ -47,11 +47,13 @@ let freq = arr.reduce((acc, num) => {
     return acc;
 }, {});
 
+console.log(freq);
+
 let maxFreq = Math.max(...Object.values(freq));
 
 if (maxFreq === 1) {
     console.log("Mode: All values just appeared just once");
 } else {
     let modes = Object.keys(freq).filter(num => freq[num] === maxFreq);
-    console.log("Mode:", modes.join(", "));
+    console.log("Mode:", modes.join(" "));
 }
