@@ -13,5 +13,12 @@
         "id": 1772599554099,
         "username": "w",
         "password": "$2b$12$joHp/1hipB3jpBSEor6CSOwshY1IZF6zKnQoGGvbvr5cto.F5yIwS"
+    },
+    {
+        "id": 1772617227040,
+        "email": "dumpyashwanth@gmail.com",
+        "password": "$2b$12$wnl9D4GbGeeI7MXOKEe8LefyNNJPmv2heqr8N1NKCaLYfw0ZCCPum",
+        "verified": false,
+        "otp": 538022
     }
 ]
