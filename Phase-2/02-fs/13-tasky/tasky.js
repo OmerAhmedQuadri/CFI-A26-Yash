@@ -33,8 +33,7 @@ async function readDB() {
 
 async function writeDB(tasks) {
     try {
-        let data = JSON.stringify(tasks, null, 4)
-        await fs.writeFile(db, data)
+
     } catch (error) {
         console.log(chalk.redBright('Error write DB',error));
     }

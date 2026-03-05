@@ -11,6 +11,7 @@ const createUser = async () => {
         verified: false,
         otp: null
     }
+    
     const data = await fs.readFile('./users.json', 'utf-8')
     const users = JSON.parse(data)
 
@@ -84,7 +85,7 @@ const verifyUser = async () => {
     const data = await fs.readFile('./users.json', 'utf8')
     const users = JSON.parse(data)
     // console.log(users);
-    const userIndex = users.find((usr) => {
+    const userIndex = users.findIndex((usr) => {
         return usr.email == email
     })
     if (userIndex == -1) return console.log('User not found!');
