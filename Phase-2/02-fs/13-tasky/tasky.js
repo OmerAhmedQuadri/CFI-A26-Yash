@@ -1,19 +1,21 @@
 import fs from 'fs/promises'
-import rs from 'readline-sync'
 import chalk from 'chalk'
+import rs from 'readline-sync'
 
-let db = './tasks.json'
+const db = './tasks.json'
 
 async function dbInit() {
     try {
         await fs.access(db)
+
         const tasks = await readDB()
-        if (!Array.isArray(tasks)) {
+
+        if(!Array.isArray(tasks)){
+            console.log('DB corrupted, initializing new DB');
             await writeDB([])
-            return
         }
     } catch (error) {
-        console.log(chalk.bgMagentaBright('DB not found, Initializing new DB'));
+        console.log('DB not found, initializing new DB');
         await writeDB([])
         await dbInit()
     }
@@ -21,120 +23,128 @@ async function dbInit() {
 
 async function readDB() {
     try {
-        let data = await fs.readFile(db, 'utf-8')
+        const data = await fs.readFile(db, 'utf-8')
+        // console.log(data);
+
         return JSON.parse(data)
-    } catch (error) {
-        console.log(chalk.redBright('Read DB error', error));
         
-        // fs.writeFile(db, '[]')
-        // return readDB()//instead we'll use db init
+    } catch (error) {
+        console.log('Read DB error: ', error);
     }
 }
 
 async function writeDB(tasks) {
     try {
-
+        const data = JSON.stringify(tasks, null, 4)
+        await fs.writeFile(db, data)
     } catch (error) {
-        console.log(chalk.redBright('Error write DB',error));
+        console.log('Write DB error: ', error);
     }
 }
 
-async function printTasks(params) {
+
+async function printTasks() {
     try {
-        let tasks = await readDB()
+        const tasks = await readDB()
+        console.log('Tasks: ');
         console.log(tasks);
     } catch (error) {
-        console.log(error);
+        console.log('Error printing tasks: ', error);
     }
 }
+// printTasks()
 
 async function createTask() {
     try {
         const tasks = await readDB()
         const newTask = {
-            id : Date.now(),
-            task : rs.question('Enter the task name:'),
-            deadline : rs.question('Please enter the deadline (dd/mm/yyyy): '),
-            priority : rs.question('Enter the priority (high/medium/low): ')
+            id: Date.now(),
+            task: rs.question('Enter the task name: '),
+            deadline: rs.question('Please enter the deadline (dd/mm/yyyy): '),
+            priority: rs.question('Enter the priority (high/medium/low): ')
         }
         tasks.push(newTask)
         await writeDB(tasks)
         console.log('Task created successfully');
-        
+
     } catch (error) {
-        console.log('Error creating new task',error);
+        console.log('Error creating new task: ', error);
     }
 }
 
-async function updateTask() {
+async function updateTask(){
     try {
+        const taskId = rs.questionInt('Please enter the task ID: ')
         const tasks = await readDB()
-        const taskIndex = rs.questionInt("Enter the id to be updated: ")
-        if (taskIndex == -1) {
-            return console.log('Task not found to update');
+    
+        const taskIndex = tasks.findIndex( t => t.id == taskId )
+        if(taskIndex == -1){
+            return console.log('task not found');
         }
         const newTask = {
-            deadline : rs.question('Please enter the deadline (dd/mm/yyyy): '),
-            priority : rs.question('Enter the priority (high/medium/low): ')
+            ...tasks[taskIndex],
+            priority: rs.question('Please enter the new task priority (high/medium/low): '),
+            deadline: rs.question('Please enter the new deadline for task (dd/mm/yyyy): ')
         }
         tasks[taskIndex] = newTask
         await writeDB(tasks)
         console.log('Task updated successfully');
-        
+
     } catch (error) {
-        console.log('Error updating task',error);
-        
+        console.log('Error updating tasks: ', error);
     }
 }
 
 async function deleteTask() {
     try {
         const tasks = await readDB()
-        const taskIndex = rs.questionInt("Enter the id to be updated: ")
-        if(taskIndex == -1)
-            return console.log('Task not found to delete');
-        tasks.splice(taskIndex,1)
+        const taskId = rs.question('Please enter the task ID: ')
+
+        const taskIndex = tasks.findIndex(t => t.id == taskId)
+        if(taskIndex == -1){
+            return console.log('Task not found');
+        }
+        tasks.splice(taskIndex, 1)
         await writeDB(tasks)
         console.log('Task deleted successfully');
-        
+
     } catch (error) {
-        console.log('Error deleting task', error);
-        
+        console.log('Error deleting task: ', error);
     }
 }
 
-async function tasky() {
-    dbInit()
-    while (true) {
-        console.log('====TASKY====');
-        console.log('1-Create Task');
-        console.log('2-Update Task');
-        console.log('3-Delete Task');
-        console.log('4-Print Tasks');
-        console.log('0-Exit');
 
-        let choice = rs.questionInt("Enter your choice: ")
+async function tasky() {
+
+    await dbInit()
+
+    while (true) {
+        console.log('\n===Tasky===');
+        console.log('1. Create task');
+        console.log('2. Update task');
+        console.log('3. Delete task');
+        console.log('4. Print tasks');
+        console.log('0. Exit');
+        const choice = rs.questionInt('Please enter your choice: ')
 
         switch (choice) {
             case 1:
                 await createTask()
-                break
+                break;
             case 2:
                 await updateTask()
                 break;
-
             case 3:
                 await deleteTask()
                 break;
-
             case 4:
                 await printTasks()
                 break;
-
             case 0:
                 return
-        
+
             default:
+                console.log('Invalid choice');
                 break;
         }
     }
