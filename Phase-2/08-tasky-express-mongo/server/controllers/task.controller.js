@@ -49,6 +49,11 @@ const getAllTasks = async (req, res) => {
     try {
         const tasks = await Task.find()
 
+        if (!tasks || tasks.length == 0) return res.send({
+            success: false,
+            message: 'No taks found',
+        })
+
         res.send({
             success: true,
             message: 'Tasks fetched Successfully',
@@ -64,11 +69,52 @@ const getAllTasks = async (req, res) => {
 const getTaskByID = async (req, res) => {
     try {
         const { id } = req.params
+        if (id.length != 24) return res.send({
+            success: false,
+            message: 'Invalid Task ID length'
+        })
+
         const task = await Task.findById(id)
+        console.log(task);
+
+        if (!task) return res.send({
+            success: false,
+            message: 'Invalid Task ID',
+            data: {}
+        })
 
         res.send({
             success: true,
-            message: 'Tasks fetched Successfully',
+            message: 'Task fetched Successfully',
+            data: task
+        })
+
+    } catch (error) {
+        console.log(error);
+        res.send(error)
+    }
+}
+
+const getTaskByPriority = async (req, res) => {
+    try {
+        const { priority } = req.params
+        if (!['high', 'medium', 'low'].includes(priority)) return res.send({
+            success: false,
+            message: 'Invalid Task Priority'
+        })
+
+        const task = await Task.find({ priority })
+        // console.log(task);
+
+        if (!task) return res.status(400).send({
+            success: false,
+            message: 'Task not found with priority',
+            data: []
+        })
+
+        res.send({
+            success: true,
+            message: 'Task fetched Successfully',
             data: task
         })
 
@@ -87,19 +133,23 @@ const updateTask = async (req, res) => {
             })
         }
 
-        const { id, task, deadline, priority } = req.body
-
-        if (!id) {
+        const { id, task, deadline, priority, completed } = req.body
+        
+        if (!id || id.length != 24) {
             return res.send({
                 success: false,
                 message: 'Missing ID to update',
             })
         }
-
-        const updatedTask = await Task.findByIdAndUpdate(
-            id,
-            { task, deadline, priority },
-        )
+        
+        if (!task || !deadline || !priority || !(completed != undefined))
+            return res.send({
+                success: false,
+                message: 'Invalid or Incomplete Data',
+            })
+        
+        const updatedAt = new Date().toLocaleString()
+        const updatedTask = await Task.findByIdAndUpdate(id, { task, deadline, priority, updatedAt, completed }, { runValidators: true, new: true })
 
         if (!updatedTask) {
             return res.send({
@@ -127,15 +177,25 @@ const updateTask = async (req, res) => {
 const deleteTask = async (req, res) => {
     try {
         const { id } = req.params
+        if (id.length != 24) return res.send({
+            success: false,
+            message: 'Invalid Task ID length'
+        })
+        const task = await Task.findByIdAndDelete(id)
 
-        await Task.findByIdAndDelete(id)
+        if (!task) return res.send({
+            success: false,
+            message: 'Task Not Found',
+            data: {}
+        })
 
         res.send({
             success: true,
-            message: 'Task deleted successfully', 
+            message: 'Task deleted successfully',
+            data: task
         })
 
-        
+
 
     } catch (error) {
         console.log(error)
@@ -147,4 +207,4 @@ const deleteTask = async (req, res) => {
     }
 }
 
-export { createTask, getAllTasks, getTaskByID, updateTask, deleteTask }
+export { createTask, getAllTasks, getTaskByPriority, getTaskByID, updateTask, deleteTask }

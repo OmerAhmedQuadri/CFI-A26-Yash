@@ -1,6 +1,7 @@
 import express from 'express'
 import './dbConnector.js'
-import { createTask, deleteTask, getAllTasks, getTaskByID, updateTask } from './controllers/task.controller.js'
+import taskRouter from './routes/task.routes.js'
+// import { createTask, deleteTask, getAllTasks, getTaskByID, getTaskByPriority, updateTask } from './controllers/task.controller.js'
 
 const app = express()
 const PORT = 3000
@@ -14,15 +15,18 @@ app.get('/', (req, res) => {
     })
 })
 
-app.post('/api/tasks/create', createTask)
+app.use('/api/tasks', taskRouter)
+// app.post('/api/tasks/create', createTask)
 
-app.get('/api/tasks', getAllTasks)
+// app.get('/api/tasks', getAllTasks)
 
-app.get('/api/tasks/:id', getTaskByID)
+// app.get('/api/tasks/:id', getTaskByID)
 
-app.put('/api/tasks/update', updateTask)
+// app.get('/api/tasks/priority/:priority', getTaskByPriority)
 
-app.delete('/api/tasks/delete/:id', deleteTask)
+// app.put('/api/tasks/update', updateTask)
+
+// app.delete('/api/tasks/delete/:id', deleteTask)
 
 app.use((req, res) => {
     res.status(404).send({
