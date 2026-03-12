@@ -129,28 +129,36 @@
 // fibonacci(10)
 
 
-import fs from 'fs'
+// import fs from 'fs'
 
 
 
-fs.readFile('file.txt', 'utf-8', (err, data) => {
-    if(err) return console.log(err);
-    console.log(data);
-    temp = data
+// fs.readFile('file.txt', 'utf-8', (err, data) => {
+//     if(err) return console.log(err);
+//     console.log(data);
+//     temp = data
 
-    fs.readFile('file2.txt', 'utf-8', (err,data2) => {
-        if(err) return console.log(err);
-        console.log(data2);
-        temp += data2
+//     fs.readFile('file2.txt', 'utf-8', (err,data2) => {
+//         if(err) return console.log(err);
+//         console.log(data2);
+//         temp += data2
 
-        fs.writeFile('output.txt',temp, (err) => {
-            if(err) return console.log(err);
-            console.log('Write Success');
-        })
-    })
-})
+//         fs.writeFile('output.txt',temp, (err) => {
+//             if(err) return console.log(err);
+//             console.log('Write Success');
+//         })
+//     })
+// })
 
-setTimeout(() => {
-    console.log(temp);
+// setTimeout(() => {
+//     console.log(temp);
     
-}, 1000);
+// }, 1000);
+
+        const newTask = {
+            task: question('Enter the task: '),
+            deadline: question('Enter the deadline: '),
+            priority: question('Enter the task: ')
+        }
+
+        log

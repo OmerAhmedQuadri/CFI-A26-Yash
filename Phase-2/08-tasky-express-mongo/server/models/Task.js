@@ -3,18 +3,18 @@ import mongoose from "mongoose";
 const taskSchema = new mongoose.Schema({
     task: {
         type: String,
-        required : true,
+        required: true,
         unique: true
     },
     deadline: {
         type: String,
         required: true
     },
-    priority : {
+    priority: {
         type: String,
         required: true,
-        enum : ['high','medium','low'],
-        default : 'medium'
+        enum: ['high', 'medium', 'low'],
+        default: 'medium',
     },
     createdAt: {
         type: String,
@@ -26,7 +26,7 @@ const taskSchema = new mongoose.Schema({
         required: true,
         default: new Date().toLocaleString()
     },
-    completed:{
+    completed: {
         type: Boolean,
         required: true,
         default: false
@@ -34,5 +34,4 @@ const taskSchema = new mongoose.Schema({
 })
 
 const Task = mongoose.model('Task', taskSchema)
-
 export default Task

@@ -1,24 +1,22 @@
-import express from "express";
-import { createTask, deleteTask, getAllTasks, getTaskByID, getTaskByPriority, updateTask } from '../controllers/task.controller.js'
+import express from 'express'
+import { createTask, deleteTaskById, getAllTasks, getTaskById, getTaskByPriority, updateTask } from '../controllers/task.controller.js'
 
 const taskRouter = express.Router()
 
-taskRouter.post('/api/tasks/create', createTask)
+taskRouter.get('/', getAllTasks)
+taskRouter.get('/:id', getTaskById)
+taskRouter.get('/priority/:priority', getTaskByPriority)
 
-taskRouter.get('/api/tasks', getAllTasks)
+taskRouter.post('/create', createTask)
 
-taskRouter.get('/api/tasks/:id', getTaskByID)
+taskRouter.put('/update', updateTask)
 
-taskRouter.get('/api/tasks/priority/:priority', getTaskByPriority)
-
-taskRouter.put('/api/tasks/update', updateTask)
-
-taskRouter.delete('/api/tasks/delete/:id', deleteTask)
+taskRouter.delete('/delete/:id', deleteTaskById)
 
 taskRouter.use((req, res) => {
     res.status(404).send({
         status: false,
-        message: 'Task Route not found'
+        message: 'Task route not found'
     })
 })
 
