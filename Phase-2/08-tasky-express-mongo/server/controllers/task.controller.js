@@ -104,6 +104,7 @@ const getTaskById = async (req, res) => {
         })
     }
 }
+
 const getTaskByPriority = async (req, res) => {
     try {
         const { priority } = req.params

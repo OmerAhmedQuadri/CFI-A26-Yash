@@ -80,7 +80,7 @@ const updateTask = async () => {
         task = question('Enter the task: '),
         deadline = question('Enter the deadline in (DD/MM/YYYY): '),
         priority = question('Enter the priority: ')
-        completed = keyInYN
+        // completed = keyInYN
         const response = await app.put('/update', newTask)
         if (!response.data.success) return console.log(chalk.redBright(response.data.message))
         console.log(chalk.yellowBright(response.data.message));
