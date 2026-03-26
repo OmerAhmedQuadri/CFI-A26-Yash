@@ -1,18 +1,32 @@
+
 /*
-Routes:
     GET:
-        /api/tasks - get all tasks
-        /api/tasks/id - get task by id
-        /api/tasks/priority/:priority - get tasks by priority
-
+        - get tasks by id / priority / deadline / all
     POST:
-        /api/tasks/create - create a new task
+        - create a new task
 
-    PUT: 
-        /api/tasks/update - update task by id
+    PUT:
+        - update task
 
-    DELETE: 
-        /api/tasks/delete/id - delete task by id
-
-
+    DELETE:
+        - delete task
+        
 */
+
+
+
+/*
+    GET:
+    POST:
+        - creat a new task request for other user
+
+    PUT:
+        - verify email
+        - verify phone
+        - update user details
+
+    DELETE:
+        - delete user
+*/
+
+
