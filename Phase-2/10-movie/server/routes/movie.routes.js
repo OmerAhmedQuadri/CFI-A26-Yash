@@ -1,9 +1,10 @@
 import express from "express"
-import { listMovie, getExisitngMovies, rateMovie } from "../controllers/movie.controllers.js"
+import { listMovie, getMovie, getExisitngMovies, rateMovie } from "../controllers/movie.controllers.js"
 
 const movieRouter = express.Router()
 
 movieRouter.get('/all/', getExisitngMovies)
+movieRouter.get('/:id/', getMovie)
 movieRouter.post('/list/', listMovie)
 movieRouter.put('/rate/', rateMovie)
 

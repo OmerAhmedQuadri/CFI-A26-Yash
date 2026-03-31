@@ -1,3 +1,36 @@
+import express from 'express'
+import { createTask, deleteTask, getAllTasks, getTaskById, updatestatus } from '../controllers/task.controllers.js'
+import { authMiddleware } from '../middlewares/auth.middlewares.js'
+
+
+const router = express.Router()
+
+
+router.get('/', (req, res) => {
+    res.send({
+        success: true,
+        message: 'task router is working just fine'
+    })
+})
+
+router.use(authMiddleware)
+router.get('/getAll', getAllTasks)
+router.get('/:taskId', getTaskById)
+router.post('/create', createTask)
+// router.put('/update', updateTask) // TODO
+router.put('/updatestatus/:status/:taskId', updatestatus)
+router.delete('/delete/:taskId', deleteTask)
+
+
+router.use((req, res)=> {
+    return res.send({
+        success: false,
+        message: 'Route not found'
+    })
+})
+
+
+export default router
 
 /*
     GET:
@@ -17,6 +50,7 @@
 
 /*
     GET:
+
     POST:
         - creat a new task request for other user
 

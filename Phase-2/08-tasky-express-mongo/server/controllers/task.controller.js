@@ -80,7 +80,7 @@ const getTaskById = async (req, res) => {
         }
 
         const task = await Task.findById(id)
-        console.log(task);
+        // console.log(task);
         if (!task) {
             return res.status(400).send({
                 success: false,

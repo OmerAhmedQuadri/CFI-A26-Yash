@@ -1,7 +1,7 @@
 import User from '../models/User.js'
 import { comparePassword } from '../utils/bcrypt.js'
 
-const validateUserRegistrationData = (userData) => {
+export const validateUserRegistrationData = (userData) => {
     const errors = []
     if (!userData.email) {
         errors.push({
@@ -49,13 +49,21 @@ export const registerMiddleware = async (req, res, next) => {
         }
 
         const existinguser = await User.findOne({ email: userData.email })
-        console.log(existinguser);
+        // console.log(existinguser);
 
         if (existinguser) {
             return res.send({
                 success: false,
                 message: 'User with email already exists',
             })
+        }
+
+        req.userData = {
+            email: userData.email,
+            phone: userData.phone,
+            fullname: userData.fullname,
+            password: userData.password,
+            role: userData.role,
         }
 
         next()
@@ -94,6 +102,19 @@ export const loginMiddleware = async (req, res, next) => {
             return res.send({
                 success: false,
                 message: 'Invalid password'
+            })
+        }
+
+        if(!user.verified.email){
+            return res.send({
+                success: false,
+                message: 'Please verify your email before login',
+            })
+        }
+        if(!user.verified.phone){
+            return res.send({
+                success: false,
+                message: 'Please verify your phone before login',
             })
         }
         req.user = user

@@ -26,6 +26,41 @@ const getExisitngMovies = async (req, res) => {
     }
 }
 
+const getMovie = async (req, res) => {
+    try {
+        const id = req.params.id
+        if (id.length != 24) {
+            return res.status(400).send({
+                status: false,
+                message: 'Invalid movie id',
+            })
+        }
+
+        const movie = await Movie.findById(id)
+        if (!movie) {
+            return res.status(400).send({
+                status: false,
+                message: 'Movie not found',
+                data: null
+            })
+        }
+
+        res.send({
+            status: true,
+            message: 'Movie fetched Successfully',
+            data: movie
+        })
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            status: false,
+            message: 'Internal server error',
+            error: error
+        })
+    }
+}
+
 const listMovie = async (req, res) => {
     try {
         if (!req.body) {
@@ -57,7 +92,7 @@ const listMovie = async (req, res) => {
             title,
             description: description || null
         })
-        
+
         await newMovie.save()
 
         res.status(200).send({
@@ -87,7 +122,7 @@ const rateMovie = async (req, res) => {
             })
         }
 
-        const { id, rate } = req.body
+        let { id, rate } = req.body
 
         if (!id || id.length != 24) {
             return res.status(400).send({
@@ -135,4 +170,4 @@ const rateMovie = async (req, res) => {
     }
 }
 
-export { getExisitngMovies, listMovie, rateMovie }
+export { getExisitngMovies, getMovie, listMovie, rateMovie }
