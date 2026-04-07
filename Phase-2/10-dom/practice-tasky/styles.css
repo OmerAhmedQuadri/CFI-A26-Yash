@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+#container h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    border: 0px;
+    outline: 0px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#input-container input {
+    background-color: rgb(61, 61, 61);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+#input{
+    width: 350px;
+}
+
+#add-btn {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#add-btn:hover {
+    background-color: rgb(124, 25, 216);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+/* #task-container{
+    background-color: rgb(115, 0, 0);
+    margin: 10px;
+    padding: 10px;
+} */
+
+li {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+#task-list {
+    text-align: center;
+}
+
+#task-list li:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+#task-list li {
+    background-color: rgb(61, 61, 61);
+    align-items: center;
+}
+
+li button {
+    border-radius: 5px;
+    border: none;
+    background-color: #fa3e3e;
+    color: white;
+    padding: 5px;
+}
+
+li button:hover {
+    background-color: rgb(220, 20, 20);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.completed {
+    background-color: rgb(46, 46, 46);
+    color: rgb(180, 180, 180);
+    opacity: 0.6;
+}
+
+.completed p {
+    text-decoration: line-through;
+}
+
+.completed button {
+    background-color: rgb(190, 0, 0);
+}
