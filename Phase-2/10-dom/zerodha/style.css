@@ -1,0 +1,97 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    /* box-sizing: border-box; */
+
+}
+
+#logo img {
+    margin: 0px;
+    padding: 0px;
+    height: 20px;
+    width: auto;
+    padding-left: 150px;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    height: 70px;
+    border-bottom: 1px solid #eee;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+}
+
+#menu a{
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    margin-left: 35px;
+    
+}
+
+#invest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#landing {
+    height: 420px;
+    width: auto;
+}
+
+#invest h1 {
+    font-size: 44px;
+    font-weight: 300;
+    margin-top: 40px;
+    color: #000;
+}
+
+#invest h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 15px;
+    color: #666;
+}
+
+#Signup{
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin-top: 35px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgb(62, 107, 232);
+    color:aliceblue;
+    padding-inline: 30px;
+    text-decoration: none;
+}
+
+#hamburger {
+    display: block;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+#hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #666;
+    margin: 4px 0;
+}
+
+#right-section {
+    display: flex;
+    align-items: center;
+}
