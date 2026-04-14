@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Saira Stencil", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    background-color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background-color: #1e293b;
+    padding: 40px 60px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quiz-container h1 {
+    margin-bottom: 20px;
+    color: #e2e8f0;
+    font-size: 48px;
+}
+
+.quiz-container button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #38bdf8;
+    color: #0f172a;
+    margin-block: 10px;
+}
+
+.quiz-container button:hover {
+    transform: scale(1.05);
+    background-color: #0ea5e9;
+}
+
+.quiz-container h3 {
+    margin-bottom: 20px;
+    color: #e2e8f0;
+    font-size: 32px;
+    text-align: left;
+}
+
+.quiz-container li {
+    color: #e2e8f0;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    background-color: #3f3f3f;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+.quiz-container li:hover {
+    background-color: #555555;
+    transform: scale(1.05);
+}
+
+.selected {
+    background-color: #555555;
+}

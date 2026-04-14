@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background-color: black;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.expense-container {
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1 1 45%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #334155;
+    color: #fff;
+}
+
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+#add-expense {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-expense:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #38bdf8;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    padding-inline: 20px;
+    margin: 8px 0px;
+    background: #334155;
+}
+
+li:hover {
+    transform: scale(1.05);
+    background: #475569;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+li:hover .hidden {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+li button {
+    border: none;
+    border-radius: 6px;
+    background: #ef4444;
+    color: white;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background: #dc2626;
+    color: aliceblue;
+
+}
+
+.output-container {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-inline: 10px ;
+    /* scrollbar-width: 0px; */
+}
+
+.output-container::-webkit-scrollbar {
+    display: none; 
+}
+
+p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #38bdf8;
+}
+
+/* Chrome, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+li div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li span{
+    font-weight: bolder;
+    padding-left: 100px;
+}

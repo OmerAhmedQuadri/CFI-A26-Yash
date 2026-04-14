@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background:#2c2c2c;
+}
+
+#container {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+#username {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    width: 220px;
+}
+
+#username:focus {
+    border-color: black;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+
+
+#submit-btn {
+    padding: 10px 16px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    font-size: 15px;
+}
+
+#submit-btn:hover {
+    transform: scale(1.02);
+    /* transform: translateX(5px); */
+    /* font */
+    background: #333;
+}
