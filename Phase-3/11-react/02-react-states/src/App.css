@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f8bebe;
+}
+
+.container div button{
+    padding: 5px;
+    background-color: #fe7777;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
