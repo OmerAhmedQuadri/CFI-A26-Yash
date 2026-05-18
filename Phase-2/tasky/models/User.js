@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema(
             trim: true,
             // Basic email regex validation at the schema level
             match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email']
-        },
+        }, 
 
         // IMPORTANT: We never store plain text passwords.
         // This field stores the bcrypt hash. See utils/bcrypt.js
