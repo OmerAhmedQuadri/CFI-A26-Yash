@@ -93,7 +93,7 @@ class Tree {
 
         recursion(this.root)
         console.log(this.arr)
-        
+
     }
     postOrder() {
 
@@ -106,6 +106,23 @@ class Tree {
             recursion(node.left)
             recursion(node.right)
             this.arr.push(node.value)
+        }
+
+        recursion(this.root)
+        console.log(this.arr)
+    }
+    bfs() {
+
+        this.arr = []
+        const recursion = (node) => {
+            if (node == null)
+                return
+
+            if (node.value != null) this.arr.push(node.value)
+            if (node.left != null) this.arr.push(node.left.value)
+            if (node.right != null) this.arr.push(node.right.value)
+            recursion(node.left)
+            recursion(node.right)
         }
 
         recursion(this.root)
@@ -132,10 +149,10 @@ console.log(tree);
 console.log(tree.search(24));
 console.log(tree.search(14));
 console.log(tree.search(0));
-tree.preOrder()
-tree.inOrder()
-tree.postOrder()
-
+// tree.preOrder()
+// tree.inOrder()
+// tree.postOrder()
+tree.bfs()
 
 //                 50
 //             /         \
