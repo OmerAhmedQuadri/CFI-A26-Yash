@@ -38,7 +38,7 @@ const App = () => {
   const [password, setpassword] = useState('')
   const [copied, setcopied] = useState(false)
 
-  const copyPassword = ()=>{
+  const copyPassword = () => {
     navigator.clipboard.writeText(password)
     setcopied(true)
     setTimeout(() => {
@@ -48,17 +48,17 @@ const App = () => {
 
   const generatePassword = useCallback(() => {
     let str = ''
-    if(lowerCaseAllowed) str += 'abcdefghijklmnopqrstuvwxyz'
-    if(symbolsAllowed) str += '!@#$%^&*()_+'
-    if(upperCaseAllowed) str += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    if(numbersAllowed) str += '0123456789'
+    if (lowerCaseAllowed) str += 'abcdefghijklmnopqrstuvwxyz'
+    if (symbolsAllowed) str += '!@#$%^&*()_+'
+    if (upperCaseAllowed) str += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    if (numbersAllowed) str += '0123456789'
     let password = ''
-    for(let i = 0; i < passwordLength; i++) {
+    for (let i = 0; i < passwordLength; i++) {
       const randomIndex = Math.floor(Math.random() * str.length)
       password += str[randomIndex]
     }
     setpassword(password)
-  }, [upperCaseAllowed, lowerCaseAllowed, symbolsAllowed, numbersAllowed,passwordLength],
+  }, [upperCaseAllowed, lowerCaseAllowed, symbolsAllowed, numbersAllowed, passwordLength],
   )
 
 
@@ -79,13 +79,18 @@ const App = () => {
             value={password}
             className="flex-1 w-full text-white rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-cyan-400" />
 
-          <button className="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-3 rounded-xl font-semibold">
-            Regenerate
+          <button onClick={generatePassword}
+            className="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-3 rounded-xl font-semibold">
+            <img
+              src="https://img.icons8.com/?size=100&id=60634&format=png&color=000000"
+              alt="home"
+              className="w-auto h-6"
+            />
           </button>
 
-          <button 
-          onClick={copyPassword}
-          className={`${!copied?'bg-green-500 hover:bg-green-600':'bg-blue-950'} transition px-5 py-3 rounded-xl font-semibold `}>
+          <button
+            onClick={copyPassword}
+            className={`${!copied ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-950'} transition px-5 py-3 rounded-xl font-semibold `}>
             {copied ? "Copied!" : "Copy"}
           </button>
         </div>
