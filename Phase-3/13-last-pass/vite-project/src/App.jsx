@@ -11,7 +11,7 @@
 //       </div>
 //       <div className='flex'>
 //         <p>Password Length</p>
-//         <span >5</span>
+//         <p >5</p>
 //         <input type="range" min={5} max={50} />
 //       </div>
 //       <div className='flex '>
@@ -27,76 +27,110 @@
 
 // export default App
 
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 const App = () => {
-return (
-<div className="min-h-screen flex items-center justify-center bg-slate-700 p-4">
+  const [passwordLength, setpasswordLength] = useState(8)
+  const [upperCaseAllowed, setupperCaseAllowed] = useState(true)
+  const [lowerCaseAllowed, setlowerCaseAllowed] = useState(true)
+  const [numbersAllowed, setnumbersAllowed] = useState(true)
+  const [symbolsAllowed, setsymbolsAllowed] = useState(true)
+  const [password, setpassword] = useState('')
+  const [copied, setcopied] = useState(false)
 
-  <div className="w-full max-w-2xl bg-slate-800 rounded-2xl shadow-2xl p-8 text-white space-y-6">
+  const generatePassword = useCallback(() => {
+    let str = ''
+    if(lowerCaseAllowed) str += 'abcdefghijklmnopqrstuvwxyz'
+    if(symbolsAllowed) str += '!@#$%^&*()_+'
+    if(upperCaseAllowed) str += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    if(numbersAllowed) str += '0123456789'
+    let password = ''
+    for(let i = 0; i < passwordLength; i++) {
+      const randomIndex = Math.floor(Math.random() * str.length)
+      password += str[randomIndex]
+    }
+    setpassword(password)
+  }, [upperCaseAllowed, lowerCaseAllowed, symbolsAllowed, numbersAllowed,passwordLength],
+  )
 
-    {/* Input + Buttons */}
-    <div className="flex flex-col md:flex-row gap-3 items-center">
 
-      <input type="text" placeholder="Generated Password"
-        className="flex-1 w-full rounded-xl px-4 py-3 text-black outline-none border-2 border-transparent focus:border-cyan-400" />
+  useEffect(() => {
+    generatePassword()
+  }, [numbersAllowed, symbolsAllowed, lowerCaseAllowed, upperCaseAllowed, passwordLength, generatePassword])
 
-      <button className="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-3 rounded-xl font-semibold">
-        Regenerate
-      </button>
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-700 p-4">
 
-      <button className="bg-green-500 hover:bg-green-600 transition px-5 py-3 rounded-xl font-semibold">
-        Copy
-      </button>
+      <div className="w-full max-w-2xl bg-slate-800 rounded-2xl shadow-2xl p-8 text-white space-y-6">
+
+        {/* Input + Buttons */}
+        <div className="flex flex-col md:flex-row gap-3 items-center">
+
+          <input type="text" placeholder="Generated Password"
+            readOnly
+            value={password}
+            className="flex-1 w-full text-white rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-cyan-400" />
+
+          <button className="bg-cyan-500 hover:bg-cyan-600 transition px-5 py-3 rounded-xl font-semibold">
+            Regenerate
+          </button>
+
+          <button className="bg-green-500 hover:bg-green-600 transition px-5 py-3 rounded-xl font-semibold">
+            Copy
+          </button>
+        </div>
+
+        {/* Password Length */}
+        <div className="flex items-center gap-4">
+
+          <p className="font-medium whitespace-nowrap">
+            Password Length : {passwordLength}
+          </p>
+
+          <input type="range" value={passwordLength} onChange={(event) => setpasswordLength(Number(event.target.value))} min={5} max={50} className="w-full accent-cyan-400 cursor-pointer" />
+        </div>
+
+        {/* Options */}
+        <div className="flex flex-wrap gap-6 items-center">
+
+          <p className="font-medium">
+            Characters Used:
+          </p>
+
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox"
+              onChange={() => setupperCaseAllowed(prev => !prev)}
+              checked={upperCaseAllowed} />
+            <p>Uppercase</p>
+          </label>
+
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox"
+              onChange={() => setlowerCaseAllowed(prev => !prev)}
+              checked={lowerCaseAllowed} />
+            <p>Lowercase</p>
+          </label>
+
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox"
+              onChange={() => setnumbersAllowed(prev => !prev)}
+              checked={numbersAllowed} />
+            <p>Numbers</p>
+          </label>
+
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox"
+              onChange={() => setsymbolsAllowed(prev => !prev)}
+              checked={symbolsAllowed} />
+            <p>Symbols</p>
+          </label>
+
+        </div>
+
+      </div>
+
     </div>
-
-    {/* Password Length */}
-    <div className="flex items-center gap-4">
-
-      <p className="font-medium whitespace-nowrap">
-        Password Length
-      </p>
-
-      <span className="bg-slate-600 px-3 py-1 rounded-lg">
-        5
-      </span>
-
-      <input type="range" min={5} max={50} className="w-full accent-cyan-400 cursor-pointer" />
-    </div>
-
-    {/* Options */}
-    <div className="flex flex-wrap gap-6 items-center">
-
-      <p className="font-medium">
-        Characters Used:
-      </p>
-
-      <label className="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" />
-        <span>Uppercase</span>
-      </label>
-
-      <label className="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" />
-        <span>Lowercase</span>
-      </label>
-
-      <label className="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" />
-        <span>Numbers</span>
-      </label>
-
-      <label className="flex items-center gap-2 cursor-pointer">
-        <input type="checkbox" />
-        <span>Symbols</span>
-      </label>
-
-    </div>
-
-  </div>
-
-</div>
-)
+  )
 }
 
 export default App
