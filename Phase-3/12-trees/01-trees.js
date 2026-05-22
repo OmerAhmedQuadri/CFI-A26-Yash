@@ -26,7 +26,7 @@ class Tree {
         let current = this.root
 
         while (true) {
-            if (value <= current.value) {
+            if (value < current.value) {
                 if (current.left == null) {
                     current.left = newNode
                     return
