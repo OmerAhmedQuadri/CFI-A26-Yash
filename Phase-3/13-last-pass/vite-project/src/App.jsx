@@ -38,6 +38,19 @@ const App = () => {
   const [password, setpassword] = useState('')
   const [copied, setcopied] = useState(false)
 
+  const handleCheckboxChange = (state, setter) => {
+    const totalSelected =
+      Number(upperCaseAllowed) +
+      Number(lowerCaseAllowed) +
+      Number(numbersAllowed) +
+      Number(symbolsAllowed)
+
+      generatePassword()
+    if (state && totalSelected === 1) return
+
+    setter(prev => !prev)
+  }
+
   const copyPassword = () => {
     navigator.clipboard.writeText(password)
     setcopied(true)
@@ -47,11 +60,15 @@ const App = () => {
   }
 
   const generatePassword = useCallback(() => {
+    // if (!lowerCaseAllowed && !upperCaseAllowed && !numbersAllowed) return setsymbolsAllowed(prev => !prev)
+    // if (!symbolsAllowed && !upperCaseAllowed && !numbersAllowed) return setlowerCaseAllowed(prev => !prev)
+    // if (!lowerCaseAllowed && !symbolsAllowed && !numbersAllowed) return setupperCaseAllowed(prev => !prev)
+    // if (!lowerCaseAllowed && !upperCaseAllowed && !symbolsAllowed) return setnumbersAllowed(prev => !prev)
     let str = ''
     if (lowerCaseAllowed) str += 'abcdefghijklmnopqrstuvwxyz'
     if (symbolsAllowed) str += '!@#$%^&*()_+'
     if (upperCaseAllowed) str += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    if (numbersAllowed) str += '0123456789'
+    if (numbersAllowed) str += '01234567890123456789'
     let password = ''
     for (let i = 0; i < passwordLength; i++) {
       const randomIndex = Math.floor(Math.random() * str.length)
@@ -114,28 +131,28 @@ const App = () => {
 
           <label className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox"
-              onChange={() => setupperCaseAllowed(prev => !prev)}
+              onChange={() => handleCheckboxChange(upperCaseAllowed, setupperCaseAllowed)}
               checked={upperCaseAllowed} />
             <p>Uppercase</p>
           </label>
 
           <label className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox"
-              onChange={() => setlowerCaseAllowed(prev => !prev)}
+              onChange={() => handleCheckboxChange(lowerCaseAllowed, setlowerCaseAllowed)}
               checked={lowerCaseAllowed} />
             <p>Lowercase</p>
           </label>
 
           <label className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox"
-              onChange={() => setnumbersAllowed(prev => !prev)}
+              onChange={() => handleCheckboxChange(numbersAllowed, setnumbersAllowed)}
               checked={numbersAllowed} />
             <p>Numbers</p>
           </label>
 
           <label className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox"
-              onChange={() => setsymbolsAllowed(prev => !prev)}
+              onChange={() => handleCheckboxChange(symbolsAllowed, setsymbolsAllowed)}
               checked={symbolsAllowed} />
             <p>Symbols</p>
           </label>
