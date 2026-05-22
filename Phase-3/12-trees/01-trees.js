@@ -26,7 +26,7 @@ class Tree {
         let current = this.root
 
         while (true) {
-            if (value <= current.value) {
+            if (value < current.value) {
                 if (current.left == null) {
                     current.left = newNode
                     return
@@ -112,21 +112,19 @@ class Tree {
         console.log(this.arr)
     }
     bfs() {
-
-        this.arr = []
-        const recursion = (node) => {
-            if (node == null)
-                return
-
-            if (node.value != null) this.arr.push(node.value)
-            if (node.left != null) this.arr.push(node.left.value)
-            if (node.right != null) this.arr.push(node.right.value)
-            recursion(node.left)
-            recursion(node.right)
+        const result = []
+        const queue = []
+        if(this.root!=null) queue.push(this.root)
+        let index = 0
+        while (index < queue.length) {
+            const node = queue[index]
+            result.push(node.value)
+            index++
+            if(node.left!=null)queue.push(node.left)
+            if(node.right!=null)queue.push(node.right)
         }
-
-        recursion(this.root)
-        console.log(this.arr)
+    return console.log(result);
+    
     }
 }
 
