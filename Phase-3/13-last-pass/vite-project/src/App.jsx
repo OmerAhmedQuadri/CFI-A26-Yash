@@ -38,6 +38,14 @@ const App = () => {
   const [password, setpassword] = useState('')
   const [copied, setcopied] = useState(false)
 
+  const copyPassword = ()=>{
+    navigator.clipboard.writeText(password)
+    setcopied(true)
+    setTimeout(() => {
+      setcopied(false)
+    }, 2000);
+  }
+
   const generatePassword = useCallback(() => {
     let str = ''
     if(lowerCaseAllowed) str += 'abcdefghijklmnopqrstuvwxyz'
@@ -75,8 +83,10 @@ const App = () => {
             Regenerate
           </button>
 
-          <button className="bg-green-500 hover:bg-green-600 transition px-5 py-3 rounded-xl font-semibold">
-            Copy
+          <button 
+          onClick={copyPassword}
+          className={`${!copied?'bg-green-500 hover:bg-green-600':'bg-blue-950'} transition px-5 py-3 rounded-xl font-semibold `}>
+            {copied ? "Copied!" : "Copy"}
           </button>
         </div>
 
