@@ -1,52 +1,32 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-    fullname: {
-        type: String,
-        required: true
-    },
-    email: {
+const urlSchema = new mongoose.Schema({
+    shortUrl: {
         type: String,
         required: true,
         unique: true
     },
-    password: {
+    longUrl: {
         type: String,
         required: true
     },
-    status: {
-        type: String,
-        enum: ['active', 'inactive', 'pending'],
-        default: 'pending'
+    clicks: {
+        type: Number,
+        default: 0
     },
-    authTokens: {
-        userRegisteration: {
-            otp: {
-                type: String,
-                required: true,
-                default: 'null'
-            },
-            expires: {
-                type: String,
-                required: true,
-                default: 'null'
-            }
-        },
-        passwordReset: {
-            otp: {
-                type: String,
-                required: true,
-                default: 'null'
-            },
-            expires: {
-                type: String,
-                required: true,
-                default: 'null'
-            }
-        }
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    expiry: {
+        type: String,
+        required: true
     }
+
+}, {
+    timestamps: true
 })
 
-const User = mongoose.model('User', userSchema)
+const Url = mongoose.model('Url', urlSchema)
 
-export default User
+export default Url
