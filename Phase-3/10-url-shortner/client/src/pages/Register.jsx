@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import api from '../api/axios.js'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Register = () => {
+    const navigate = useNavigate()
   const [loading, setloading] = useState(false)
   const [error, seterror] = useState('')
   const [success, setsuccess] = useState('')
@@ -44,6 +46,9 @@ const Register = () => {
       setsuccess(response.data.message)
       setloading(false)
       setstep('success')
+       if(response.data.success){
+        navigate('/login')
+      }
     } catch (error) {
       seterror(error.response.data.message)
       setloading(false)
@@ -94,9 +99,9 @@ const Register = () => {
               </form>
               <p className="text-center text-gray-500 text-sm mt-2">
                 Have an account?{' '}
-                <span className="text-blue-600 cursor-pointer hover:text-blue-800 font-medium">
+                <Link to="/login" className="text-blue-600 cursor-pointer hover:text-blue-800 font-medium">
                   Login
-                </span>
+                </Link>
                 </p>
             </div>
             :

@@ -1,6 +1,6 @@
 import React from 'react'
 import api from '../api/axios.js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Home = () => {
     const [longUrl, setlongUrl] = useState('')
@@ -8,6 +8,12 @@ const Home = () => {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const [copy, setcopy] = useState(false)
+
+    useEffect(() => {
+        setError('')
+        setshortUrl('')
+    }, [longUrl])
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -50,14 +56,16 @@ const Home = () => {
 
                 <div className='w-full flex flex-col gap-4'>
                     <input value={longUrl} onChange={e => setlongUrl(e.target.value)} type="text" placeholder='https://example.com/very-long-url' className='w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500' />
-                    <button onClick={handleSubmit} disabled={loading} className='w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition disabled:opacity-50'> {!loading ? 'Shorten URL' : 'Shortening...'} </button>
+                    <button onClick={handleSubmit} disabled={loading} 
+                    className={`${loading ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 cursor-pointer'} w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition disabled:opacity-50`}> 
+                    {!loading ? 'Shorten URL' : 'Shortening...'} </button>
                 </div>
 
                 {shortUrl && (
                     <div className='pt-6'>
                         <h5 className='font-semibold text-gray-700 mb-3'> Your Short URL </h5>
                         <div className='flex'>
-                            <input type="text" value={shortUrl} readOnly className='flex-1 border border-gray-300 bg-gray-50 p-3 rounded-l-xl outline-none'/>
+                            <input type="text" value={shortUrl} readOnly className='flex-1 border border-gray-300 bg-gray-50 p-3 rounded-l-xl outline-none' />
                             <button onClick={copyHandler} className={`px-5 rounded-r-xl text-white font-medium transition ${copy ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-600 hover:bg-blue-700'}`}> {copy ? 'Copied ✓' : 'Copy'} </button>
                         </div>
 
