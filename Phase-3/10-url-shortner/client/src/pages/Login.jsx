@@ -28,7 +28,7 @@ const Login = () => {
             setsuccess(response.data.message)
             setloading(false)
             console.log(response.data.message);
-            
+
         } catch (error) {
             console.log(error);
             seterror(error.response.data.message)
@@ -36,21 +36,35 @@ const Login = () => {
         }
     }
     return (
-        <div className='w-full h-screen flex flex-col items-center justify-center'>
-            <div className=' p-4 border rounded-2xl flex flex-col items-center max-w-md'>
+        <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4'>
+            <div className='w-full max-w-md bg-white rounded-3xl shadow-xl p-8'>
+                <div className="text-center mb-8">
+                    <h1 className="text-3xl font-bold text-gray-800">
+                        Welcome Back
+                    </h1>
 
-                {error && <div className='bg-red-500 text-white p-2 mb-4'>
+                    <p className="text-gray-500 mt-2">
+                        Sign in to your account
+                    </p>
+                </div>
+                {error && <div className='mb-4 rounded-lg bg-red-100 border border-red-300 text-red-700 p-3'>
                     {error}
                 </div>}
 
                 <div>
-                    <form onChange={onChangeHandler} className=''>
-                        <input type="email" name='email' placeholder='Email' className='border p-2 rounded-lg mb-4 w-full' />
-                        <input type="password" name='password' placeholder='Password' className='border p-2 rounded-lg mb-4 w-full' />
-                        <button type='submit' onClick={loginHandler} className='bg-blue-500 text-white p-2 rounded-lg w-full'>Login</button>
+                    <form onChange={onChangeHandler} className='space-y-3'>
+                        <input type="email" name='email' placeholder='Email' className='w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition' />
+                        <input type="password" name='password' placeholder='Password' className='w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition' />
+                        <button type="button" className="text-sm text-blue-600 hover:text-blue-800">Forgot Password?</button>
+                        <button type='submit' onClick={loginHandler} className='w-full bg-blue-600 hover:bg-blue-700 transition text-white py-3 rounded-xl font-semibold disabled:opacity-50'>Login</button>
+                        <p className="text-center text-gray-500 text-sm">
+                            Don't have an account?{' '}
+                            <span className="text-blue-600 cursor-pointer hover:text-blue-800 font-medium">
+                                Register
+                            </span>
+                        </p>
                     </form>
                 </div>
-
             </div>
 
         </div>

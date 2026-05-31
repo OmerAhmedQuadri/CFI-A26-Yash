@@ -2,8 +2,13 @@ import { getLongUrl, saveUrl } from "../services/url.service.js";
 import { generateShortUrl } from "../utils/shorturl.utils.js";
 
 export const createShortUrl = async (req, res) => {
-    const { url } = req.body || {};
+    // const { url } = req.body || {};
     const user = req.user;
+    let { url } = req.body;
+
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = `https://${url}`;
+    }
     if (!url) {
         return res.status(400).send({
             success: false,
