@@ -69,10 +69,10 @@ export const adminLoginMiddleware = async (req, res, next) => {
 export const adminAuthMiddleware = async (req, res, next) => {
     try {
         const jwtToken = req.headers['auth-token']
-        if(!jwtToken){
+        if (!jwtToken) {
             return res.send({
-                success:false,
-                message:'Jwt must be provided'
+                success: false,
+                message: 'Jwt must be provided'
             })
         }
         const adminData = await decodeJWT(jwtToken)
